@@ -1,9 +1,11 @@
 /* Main Style Controller */
 
 html {
-   
 scroll-behavior: smooth;
+}
 
+::selection {
+    background: #00cc80;
 }
 
 body {
@@ -23,7 +25,7 @@ body {
     font-size: 75px;
     padding: 55px;
     margin: 0;
-    background: url(/assets/Images/Ocean\ Stars.jpg);
+    background: url(/assets/Images/Ocean-Stars.jpg);
     background-position: 50% 0%;
     background-attachment: fixed;
     position: sticky;
@@ -73,15 +75,33 @@ nav ul {
 }
 
 main {
-    width: 70%;
     margin: 0 auto;
 }
 
 section {
-    padding: 100px 0px;
+    padding: 100px 200px;
+}
+
+#about {
+    color: black;
+    background: white;
+}
+
+
+
+.name-header {
+    display: block;
 }
 
 .bio {
-    display: block;
-    width: 50%;
+    display: flex;
+    width: 100%;
+    place-items: center;
+    padding: 35px;
+}
+
+.bio p {
+    letter-spacing: 2px;
+    font-size: 19px;
+    padding: 35px;
 }
