@@ -1,16 +1,26 @@
+/* Main Style Controller */
+
 html {
-    background-color: #656565 !important;
+    background: linear-gradient(
+        0deg
+        , #000921, #06045c);
+scroll-behavior: smooth;
+
 }
 
 body {
-    background: #656565 !important;
+    background: linear-gradient( 
+        0deg
+         , #000921, #02184a);
     font-family: 'montserrat';
     color: #fff;
     width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
     margin: 0 auto;
+   
 }
+
+/* Header Styling */
 
 .opening-header {
     text-align: center;
@@ -21,14 +31,23 @@ body {
     display: block;
 }
 
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+ top: 0px;
+ border-top: 1px solid #fff;
+ border-bottom: 1px solid #fff;
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
  justify-content: center;
  padding: 30px;
- background: linear-gradient(black, #656565);
+ background: linear-gradient(#222937, #011748);
  list-style-type: none;
  margin: 0;
+ 
 }
 
 .nav-link a {
@@ -36,4 +55,14 @@ nav ul {
     margin: 0 15px;
     text-decoration: none;
     color: #fff;
+    transition: 300ms ease-in-out;
+}
+
+.nav-link a:hover {
+    color: #ff172d;
+    transition: 300ms ease-in-out;
+}
+
+main {
+    height: 9000px;
 }
