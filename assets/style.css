@@ -1,17 +1,13 @@
 /* Main Style Controller */
 
 html {
-    background: linear-gradient(
-        0deg
-        , #000921, #06045c);
+   
 scroll-behavior: smooth;
 
 }
 
 body {
-    background: linear-gradient( 
-        0deg
-         , #000921, #02184a);
+    background: #00164c;
     font-family: 'montserrat';
     color: #fff;
     width: 100vw;
@@ -27,14 +23,18 @@ body {
     font-size: 75px;
     padding: 55px;
     margin: 0;
-    background: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg);
-    display: block;
+    background: url(/assets/Images/Ocean\ Stars.jpg);
+    background-position: 50% 0%;
+    background-attachment: fixed;
+    position: sticky;
+    top: 0;
+    letter-spacing: 2px;
 }
 
 nav {
     position: -webkit-sticky;
     position: sticky;
- top: 0px;
+ top: 0;
  border-top: 1px solid #fff;
  border-bottom: 1px solid #fff;
 }
@@ -44,10 +44,12 @@ nav ul {
     flex-direction: row;
  justify-content: center;
  padding: 30px;
- background: linear-gradient(#222937, #011748);
+ /* background: linear-gradient(#000000, #011748); */
+ background: rgb(0 0 0 / 50%);
+ backdrop-filter: blur(2px);
  list-style-type: none;
  margin: 0;
- 
+ position: -webkit-sticky;
 }
 
 .nav-link a {
@@ -59,10 +61,27 @@ nav ul {
 }
 
 .nav-link a:hover {
-    color: #ff172d;
+    /* color: #ff172d; */
+    color: #00cc80;
+    transition: 300ms ease-in-out;
+}
+
+.nav-link a:active {
+    /* color: #ff172d; */
+    color: #00c2ff;
     transition: 300ms ease-in-out;
 }
 
 main {
-    height: 9000px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px 0px;
+}
+
+.bio {
+    display: block;
+    width: 50%;
 }
