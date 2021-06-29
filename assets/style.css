@@ -1,0 +1,39 @@
+html {
+    background-color: #656565 !important;
+}
+
+body {
+    background: #656565 !important;
+    font-family: 'montserrat';
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+.opening-header {
+    text-align: center;
+    font-size: 75px;
+    padding: 55px;
+    margin: 0;
+    background: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg);
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+ justify-content: center;
+ padding: 30px;
+ background: linear-gradient(black, #656565);
+ list-style-type: none;
+ margin: 0;
+}
+
+.nav-link a {
+    padding: 0 15px;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
