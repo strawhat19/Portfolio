@@ -102,10 +102,20 @@ nav ul {
 
 #Projects a {
     padding: 15px;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     border: 4px inset var(--main-red) !important;
-    margin: 10px;
+    margin: 10px auto;
+    font-weight: 600;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
+   
+    transition: 150ms ease-in-out;
+}
+
+#Projects a:hover {
+    color: #fff;
     transition: 150ms ease-in-out;
 }
 
@@ -116,8 +126,8 @@ nav ul {
 }
 
 .Projects a:hover {
-    color: rgb(255 255 255);
-    background: var(--main-red);
+    color: #fff;
+    background: #ab0f1e;
     padding: 15px;
     transition: 150ms ease-in-out;
 }
@@ -146,7 +156,6 @@ nav .Projects.active a:hover {
     transition: 150ms ease-in-out;
 }
 
-
 .Projects.active a {
     color: var(--soft-white);
     background: var(--main-red);
@@ -167,7 +176,15 @@ nav .Projects.active a:hover {
     transition: 150ms ease-in-out;
 }
 
+#Projects .project-link a:hover {
+    color: #fff;
+    border: 4px inset var(--main-red) !important;
+    box-shadow: 0 0 4px 0px black;
+    transition: 150ms ease-in-out;
+}
+
 .project-link a:hover {
+    color: #fff;
     border: 4px inset var(--main-red) !important;
     box-shadow: 0 0 4px 0px black;
     transition: 150ms ease-in-out;
@@ -258,10 +275,10 @@ hr {
 }
 
 #Projects {
-    color: #fff !important;
-        background: repeating-linear-gradient( 
-    90deg
-     , var(--dark-blue) 1px, #0054bc 2px 213px);
+    background: repeating-linear-gradient( 
+90deg
+ , #dcdcdc 1px, #ffffff 2px 213px);
+    color: rgb(0 0 0) !important;
 }
 
 #Projects ::selection, #Projects hr {
@@ -324,7 +341,11 @@ justify-content: center;
 
 #Projects .content img {
     border-radius: 0px;
-    width: 100%;
+    width: auto;
+    object-fit: contain;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
 }
 
 /* Laptops */
@@ -344,7 +365,7 @@ justify-content: center;
 
     .header,  #Projects .header {
         text-align: center;
-        width: 700px;
+        max-width: 700px;
         margin: 0 auto;
         transition: 150ms ease-in-out;
     }
@@ -511,6 +532,16 @@ footer {
 
   ::-webkit-scrollbar-thumb {
     background-color: #454a4d;
+}
+
+/* Larger iPads and Tablets */
+
+@media screen and (max-width: 992px) {
+
+   footer {
+    padding: 100px 30px;
+   }
+
 }
 
 
