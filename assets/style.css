@@ -19,10 +19,6 @@ html {
 scroll-behavior: smooth;
 }
 
-::selection {
-    background: var(--main-blue);
-}
-
 body {
     background: #00164c;
     font-family: 'montserrat';
@@ -83,55 +79,106 @@ nav ul {
     transition: 150ms ease-in-out;
 }
 
-.about a:hover {
+.About a:hover {
     color: var(--soft-white);
     background: var(--main-green);
     padding: 15px;
     transition: 150ms ease-in-out;
 }
 
-.about.active a {
+.About.active a {
     color: var(--soft-white);
     background: var(--main-green);
     padding: 15px;
     transition: 150ms ease-in-out;
 }
 
-.about.active a:hover {
+.About.active a:hover {
     color: var(--main-green);
     background: rgb(24, 26, 27);
     padding: 15px;
     transition: 150ms ease-in-out;
 }
 
-.projects a:hover {
+#Projects a {
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    border: 4px inset var(--main-red) !important;
+    margin: 10px;
+    transition: 150ms ease-in-out;
+}
+
+.project-link a {
+    padding: 15px;
+    border: 4px inset var(--main-red) !important;
+    transition: 150ms ease-in-out;
+}
+
+.Projects a:hover {
     color: rgb(255 255 255);
     background: var(--main-red);
     padding: 15px;
+    transition: 150ms ease-in-out;
+}
+
+nav .Projects a:hover {
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
     transition: 150ms ease-in-out;
 }
 
-.projects.active a {
+nav .Projects.active a {
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
+}
+
+nav .Projects.active a:hover {
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
+}
+
+nav .Projects.active a:hover {
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
+}
+
+
+.Projects.active a {
     color: var(--soft-white);
     background: var(--main-red);
     padding: 15px;
-    border-right: 1px solid var(--grays);
-    border-left: 1px solid var(--grays);
     transition: 150ms ease-in-out;
 }
 
-.projects.active a:hover {
+.Projects.active a:hover {
     color: var(--main-red);
     background: rgb(24, 26, 27);
     padding: 15px;
-    border-right: 1px solid var(--grays);
-    border-left: 1px solid var(--grays);
     transition: 150ms ease-in-out;
 }
 
-.contact a:hover {
+.project-link a {
+    border: 4px inset var(--main-red) !important;
+    box-shadow: 0 0 4px 0px black;
+    transition: 150ms ease-in-out;
+}
+
+.project-link a:hover {
+    border: 4px inset var(--main-red) !important;
+    box-shadow: 0 0 4px 0px black;
+    transition: 150ms ease-in-out;
+}
+
+.project-link a:active {
+    border: 4px inset var(--main-red) !important;
+    transition: 150ms ease-in-out;
+}
+
+.Contact a:hover {
     color: var(--soft-white);
     background: var(--main-blue);
     padding: 15px;
@@ -140,7 +187,7 @@ nav ul {
     transition: 150ms ease-in-out;
 }
 
-.contact.active a {
+.Contact.active a {
     color: var(--soft-white);
     background: var(--main-blue);
     padding: 15px;
@@ -149,7 +196,7 @@ nav ul {
     transition: 150ms ease-in-out;
 }
 
-.contact.active a:hover {
+.Contact.active a:hover {
     color: var(--main-blue);
     background: rgb(24, 26, 27);
     padding: 15px;
@@ -197,7 +244,7 @@ hr {
 }
 
 
-#about {
+#About {
     color: var(--soft-white);
     background-image: repeating-linear-gradient( 
         90deg
@@ -205,20 +252,20 @@ hr {
     background-color: initial;
 }
 
-#about ::selection, #about hr {
-    background: var(--main-green);
+#About ::selection, #About hr {
+    background: var(--main-green) !important;
     border-color: var(--main-green);
 }
 
-#projects {
+#Projects {
     color: #fff !important;
         background: repeating-linear-gradient( 
     90deg
      , var(--dark-blue) 1px, #0054bc 2px 213px);
 }
 
-#projects ::selection, #projects hr {
-    background: var(--main-red);
+#Projects ::selection, #Projects hr {
+    background: var(--main-red) !important;
     border-color: var(--main-red);
 }
 
@@ -226,7 +273,7 @@ hr {
     display: block;
 }
 
-#projects .header {
+#Projects .header {
     text-align: right;
 }
 
@@ -237,7 +284,7 @@ hr {
     justify-content: space-between;
 }
 
-#about .content img {
+#About .content img {
     box-shadow: 6px 6px 0px 0px var(--main-green);
     border-radius: 100px;
     width: 20%;
@@ -252,30 +299,30 @@ hr {
     transition: 150ms ease-in-out;
 }
 
-#projects hr {
+#Projects hr {
     width: 375px;
 }
 
-#projects .grid-row {
+#Projects .grid-row {
     column-gap: 50px;
     padding: 25px 0px; 
 }
 
-#projects .box {
+#Projects .box {
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 }
 
-#projects .box h4 {
+#Projects .box h4 {
     text-align: center;
 }
 
-#projects .box hr {
+#Projects .box hr {
     width: 100%;
 }
 
-#projects .content img {
+#Projects .content img {
     border-radius: 0px;
     width: 100%;
 }
@@ -284,7 +331,7 @@ justify-content: center;
 
 @media screen and (min-width: 1601px) {
 
-    #about .content p {
+    #About .content p {
         padding: 0 0 35px 70px;
         border-left: 5px inset var(--main-green);
         border-bottom: 5px inset var(--main-green);
@@ -295,7 +342,7 @@ justify-content: center;
 
 @media screen and (max-width: 1600px) {
 
-    .header,  #projects .header {
+    .header,  #Projects .header {
         text-align: center;
         width: 700px;
         margin: 0 auto;
@@ -315,7 +362,7 @@ justify-content: center;
        transition: 150ms ease-in-out;
     }
 
-    #about .content {
+    #About .content {
         display: flex;
         flex-direction: column;
         transition: 150ms ease-in-out;
@@ -329,7 +376,7 @@ justify-content: center;
     transition: 150ms ease-in-out;
     }
 
-    #about .content img {
+    #About .content img {
         min-height: 400px;
         max-height: 400px;
         width: auto;
@@ -337,7 +384,7 @@ justify-content: center;
         transition: 150ms ease-in-out;
     }
 
-    #projects .grid-row {
+    #Projects .grid-row {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -353,18 +400,18 @@ justify-content: center;
         transition: 150ms ease-in-out;
     }
 
-    #projects .box h4 {
+    #Projects .box h4 {
       margin: 25px 0px;
       transition: 150ms ease-in-out;
     }
 
-    #projects .box hr {
+    #Projects .box hr {
         width: 100%;
         max-width: 300px;
         transition: 150ms ease-in-out;
     }
 
-    #projects .content img {
+    #Projects .content img {
         margin: 0 auto;
         border-radius: 0px;
         width: 100%;
@@ -393,12 +440,12 @@ justify-content: center;
 
 }
 
-#contact {
+#Contact {
     background: repeating-linear-gradient(90deg, var(--main-blue) 1px, #00164c 2px 213px);
 }
 
-#contact ::selection, #contact hr {
-    background: var(--main-blue);
+#Contact ::selection, #Contact hr {
+    background: var(--main-blue) !important;
     border-color: var(--main-blue);
 }
 
@@ -442,7 +489,7 @@ footer {
 
   ::scrollbar {
     background-color: #202324;
-    color: #aba499;
+    color: #Aba499;
 }
 
   ::scrollbar-corner {
@@ -455,7 +502,7 @@ footer {
 
   ::-webkit-scrollbar {
     background-color: #202324;
-    color: #aba499;
+    color: #Aba499;
 }
 
   ::-webkit-scrollbar-corner {
