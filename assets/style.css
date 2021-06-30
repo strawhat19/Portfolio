@@ -1,11 +1,18 @@
 /* Main Style Controller */
 
+:root {
+    --main-blue: #00c2ff;
+    --main-red: #ff172d;
+    --main-green: #00cc80;
+    --dark-blue: #00164c;
+}
+
 html {
 scroll-behavior: smooth;
 }
 
 ::selection {
-    background: #00cc80;
+    background: var(--main-blue);
 }
 
 body {
@@ -45,7 +52,7 @@ nav ul {
     display: flex;
     flex-direction: row;
  justify-content: center;
- padding: 30px;
+ padding: 15px;
  /* background: linear-gradient(#000000, #011748); */
  background: rgb(0 0 0 / 50%);
  backdrop-filter: blur(2px);
@@ -82,6 +89,18 @@ section {
     padding: 100px 200px;
 }
 
+@media screen and (max-width: 992px) {
+
+    section {
+        padding: 100px 110px;
+    }
+
+}
+
+hr {
+    width: 29.75%;
+}
+
 #about {
     color: black;
     background: repeating-linear-gradient(
@@ -89,10 +108,20 @@ section {
 , #e5e5e5 1px, white 2px 205px);
 }
 
+#about ::selection, #about hr {
+    background: var(--main-green);
+    border-color: var(--main-green);
+}
+
 #projects {
     background: repeating-linear-gradient( 
         90deg
-         , #00164c 1px, #5e79bb 2px 205px);
+         , var(--dark-blue) 1px, #5e79bb 2px 205px);
+}
+
+#projects ::selection, #projects hr {
+    background: var(--main-red);
+    border-color: var(--main-red);
 }
 
 
@@ -109,6 +138,12 @@ section {
     width: 100%;
     place-items: center;
     padding: 35px;
+    
+}
+
+.bio img {
+    border-radius: 100%;
+    width: 20%;
 }
 
 .bio p {
@@ -117,8 +152,41 @@ section {
     padding: 35px;
 }
 
+@media screen and (max-width:1200px) {
+
+    .header,  #projects .header {
+        text-align: center;
+        
+    }
+
+    hr {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .bio {
+        padding: 35px 0px;
+       flex-wrap: wrap;
+    }
+
+    .bio img {
+        width: 55%;
+        min-width: 240px;
+        margin: 0 auto;
+    }
+
+    .bio p {
+    padding: 35px 0px;
+    order: 2;
+    }
+
+}
+
 #contact {
-    background: repeating-linear-gradient( 
-90deg
- , #36b9e1 1px, #00164c 2px 205px);
+    background: repeating-linear-gradient(90deg, var(--main-blue) 1px, #00164c 2px 205px);
+}
+
+#contact ::selection, #contact hr {
+    background: var(--main-blue);
+    border-color: var(--main-blue);
 }
