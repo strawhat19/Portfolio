@@ -166,6 +166,27 @@ section {
     padding: 100px 200px;
 }
 
+h3 {
+    margin: 0;
+    padding: 15px;
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+hr {
+    width: 395px;
+    border-width: 3px;
+}
+
+
+
 @media screen and (max-width: 992px) {
 
     section {
@@ -174,18 +195,6 @@ section {
 
 }
 
-    h3 {
-        letter-spacing: 5px;
-    }
-
-    h4 {
-        font-size: 25px;
-    }
-
-
-hr {
-    width: 29.75%;
-}
 
 #about {
     color: var(--soft-white);
@@ -201,9 +210,9 @@ hr {
 }
 
 #projects {
-    background: repeating-linear-gradient( 
-        90deg
-         , var(--dark-blue) 1px, #5e79bb 2px 213px);
+        background: repeating-linear-gradient( 
+    90deg
+     , var(--dark-blue) 1px, #0054bc 2px 213px);
 }
 
 #projects ::selection, #projects hr {
@@ -220,52 +229,110 @@ hr {
     text-align: right;
 }
 
-.bio {
+.content {
     display: flex;
     width: 100%;
     place-items: center;
-    padding: 35px;
-    
+    justify-content: space-between;
 }
 
-.bio img {
-    border-radius: 100%;
+#about .content img {
+    box-shadow: 6px 6px 0px 0px var(--main-green);
+    border-radius: 100px;
     width: 20%;
 }
 
-.bio p {
+.content p {
     letter-spacing: 2px;
     font-size: 19px;
+    line-height: 1.8;
     padding: 35px;
+    font-weight: 500;
+    transition: 150ms ease-in-out;
 }
 
-@media screen and (max-width:1200px) {
+
+#projects .grid-row {
+    column-gap: 35px;
+    padding: 25px 0px; 
+}
+
+#projects .project-box h4 {
+    text-align: center;
+}
+
+#projects .project-box hr {
+    width: 100%;
+}
+
+#projects .content img {
+    border-radius: 0px;
+    width: 100%;
+}
+
+/* Laptops */
+
+@media screen and (min-width:1535px) {
+
+    #about .content p {
+        padding: 0 0 35px 70px;
+        border-left: 5px inset var(--main-green);
+        border-bottom: 5px inset var(--main-green);
+        width: 69%;
+    }
+
+}
+
+@media screen and (max-width: 1535px) {
 
     .header,  #projects .header {
         text-align: center;
-        
+        width: 700px;
+        margin: 0 auto;
+        transition: 150ms ease-in-out;
     }
 
     hr {
-        width: 100%;
-        margin-top: 35px;
+        width: 395px;
+        float: none !important;
+        transition: 150ms ease-in-out;
     }
 
-    .bio {
+    .content {
         padding: 35px 0px;
        flex-wrap: wrap;
+       transition: 150ms ease-in-out;
     }
 
-    .bio img {
-        width: 55%;
-        min-width: 240px;
-        margin: 0 auto;
+    #about .content {
+        display: flex;
+        flex-direction: column;
+        transition: 150ms ease-in-out;
     }
 
-    .bio p {
+    .content p {
     padding: 35px 0px;
     order: 2;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 150ms ease-in-out;
     }
+
+    .content img {
+        min-height: 400px;
+        max-height: 400px;
+        width: auto;
+        margin: 0 auto;
+        transition: 150ms ease-in-out;
+    }
+
+}
+
+/* XL - Large Breakpoint */
+
+@media screen and (max-width:1200px) {
+
+  
 
 }
 
@@ -286,19 +353,6 @@ footer {
     background: black;
 }
 
-/* iPhone and iPad */
-
-@media screen and (max-width: 768px) {
-
-    section {
-        padding: 40px;
-    }
-
-    .opening-header {
-    font-size: 45px;
-}
-
-}
 
 /* Scroll to Top Button CSS */
 
@@ -354,3 +408,36 @@ footer {
   ::-webkit-scrollbar-thumb {
     background-color: #454a4d;
 }
+
+
+/* iPhone and iPad */
+
+@media screen and (max-width: 768px) {
+
+    section {
+        padding: 40px;
+    }
+
+    .opening-header {
+    font-size: 45px;
+}
+
+}
+
+
+/* Smaller Screens */
+
+@media screen and (max-width:500px) {
+
+    h3 {
+        padding: 0px;
+        font-size: 25px;
+    }
+
+    hr {
+        border-width: 1px;
+    }
+
+
+}
+
