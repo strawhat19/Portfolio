@@ -178,6 +178,7 @@ h4 {
     font-size: 25px;
     text-align: center;
     letter-spacing: 2px;
+    margin: 10px auto;
 }
 
 hr {
@@ -210,6 +211,7 @@ hr {
 }
 
 #projects {
+    color: #fff;
         background: repeating-linear-gradient( 
     90deg
      , var(--dark-blue) 1px, #0054bc 2px 213px);
@@ -219,7 +221,6 @@ hr {
     background: var(--main-red);
     border-color: var(--main-red);
 }
-
 
 .header {
     display: block;
@@ -251,17 +252,20 @@ hr {
     transition: 150ms ease-in-out;
 }
 
+#projects hr {
+    width: 375px;
+}
 
 #projects .grid-row {
-    column-gap: 35px;
+    column-gap: 50px;
     padding: 25px 0px; 
 }
 
-#projects .project-box h4 {
+#projects .box h4 {
     text-align: center;
 }
 
-#projects .project-box hr {
+#projects .box hr {
     width: 100%;
 }
 
@@ -272,7 +276,7 @@ hr {
 
 /* Laptops */
 
-@media screen and (min-width:1535px) {
+@media screen and (min-width: 1601px) {
 
     #about .content p {
         padding: 0 0 35px 70px;
@@ -283,7 +287,7 @@ hr {
 
 }
 
-@media screen and (max-width: 1535px) {
+@media screen and (max-width: 1600px) {
 
     .header,  #projects .header {
         text-align: center;
@@ -299,6 +303,7 @@ hr {
     }
 
     .content {
+        display: flex;
         padding: 35px 0px;
        flex-wrap: wrap;
        transition: 150ms ease-in-out;
@@ -318,10 +323,39 @@ hr {
     transition: 150ms ease-in-out;
     }
 
-    .content img {
+    #about .content img {
         min-height: 400px;
         max-height: 400px;
         width: auto;
+        margin: 0 auto;
+        transition: 150ms ease-in-out;
+    }
+
+    .grid-row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transition: 150ms ease-in-out;
+    }
+
+    .grid-row .box {
+        width: 50%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transition: 150ms ease-in-out;
+    }
+
+    #projects .box h4 {
+      margin: 25px 0px;
+    }
+
+    #projects .box hr {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #projects .content img {
         margin: 0 auto;
         transition: 150ms ease-in-out;
     }
