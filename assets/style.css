@@ -32,7 +32,7 @@ body {
     font-size: 75px;
     padding: 55px;
     margin: 0;
-    background: url(./assets/Images/Ocean-Stars.jpg);
+    background: url(./Images/Ocean-Stars.jpg);
     background-position: 50% 0%;
     background-attachment: fixed;
     position: sticky;
@@ -164,6 +164,12 @@ section {
     }
 
 }
+
+
+    h3 {
+        letter-spacing: 5px;
+    }
+
 
 hr {
     width: 29.75%;
