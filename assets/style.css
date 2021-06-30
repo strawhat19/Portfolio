@@ -25,6 +25,7 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
    box-sizing: border-box;
+   width: 100vw;
 }
 
 /* Header Styling */
@@ -277,4 +278,18 @@ footer {
     flex-direction: column;
     place-items: center;
     background: black;
+}
+
+/* iPhone and iPad */
+
+@media screen and (max-width: 768px) {
+
+    section {
+        padding: 40px;
+    }
+
+    .opening-header {
+    font-size: 45px;
+}
+
 }
