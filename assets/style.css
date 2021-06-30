@@ -22,7 +22,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     margin: 0 auto;
-   
+   box-sizing: border-box;
 }
 
 /* Header Styling */
@@ -32,7 +32,7 @@ body {
     font-size: 75px;
     padding: 55px;
     margin: 0;
-    background: url(/assets/Images/Ocean-Stars.jpg);
+    background: url(./assets/Images/Ocean-Stars.jpg);
     background-position: 50% 0%;
     background-attachment: fixed;
     position: sticky;
@@ -66,19 +66,87 @@ nav ul {
     margin: 0 15px;
     text-decoration: none;
     color: #fff;
-    transition: 300ms ease-in-out;
+    transition: 150ms ease-in-out;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
 }
 
-.nav-link a:hover {
-    /* color: #ff172d; */
-    color: #00cc80;
-    transition: 300ms ease-in-out;
+.about a:hover {
+    color: #fff;
+    background: var(--main-green);
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    
 }
 
-.nav-link a:active {
-    /* color: #ff172d; */
-    color: #00c2ff;
-    transition: 300ms ease-in-out;
+.about.active a {
+    color: #fff;
+    background: var(--main-green);
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    
+}
+
+.about.active a:hover {
+    color: var(--main-green);
+    background: #fff;
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    
+}
+
+.projects a:hover {
+    color: #fff;
+    background: var(--main-red);
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.projects.active a {
+    color: #fff;
+    background: var(--main-red);
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.projects.active a:hover {
+    color: var(--main-red);
+    background: #fff;
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.contact a:hover {
+    color: #fff;
+    background: var(--main-blue);
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.contact.active a {
+    color: #fff;
+    background: var(--main-blue);
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.contact.active a:hover {
+    color: var(--main-blue);
+    background: #fff;
+    transition: 150ms ease-in-out;
+    padding: 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
 }
 
 main {
@@ -189,4 +257,12 @@ hr {
 #contact ::selection, #contact hr {
     background: var(--main-blue);
     border-color: var(--main-blue);
+}
+
+footer {
+    padding: 100px 300px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background: black;
 }
