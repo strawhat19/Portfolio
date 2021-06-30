@@ -1,5 +1,5 @@
-console.log('Hey there, welcome to my website!');
-console.log('This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation. Feel free to scroll and see the changes.');
+console.log('%c Hey there, welcome to my website!', 'font-family: montserrat;');
+console.log('%c This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation. Feel free to scroll and see the changes.', 'font-family: montserrat;');
 
 
 const sections = document.querySelectorAll('section');
@@ -26,8 +26,11 @@ if(pageYOffset >= (sectionTop - sectionHeight / 3)) {
     })
 
 
-    console.log("Current section id and class: "+current);
-    console.log("Current distance from top is: "+pageYOffset);
+    console.log("%c Current section id and class:", "font-family: montserrat;");
+    console.log("%c" + current, "color: white; background: #00c2ff; padding: 0 15px; font-family: montserrat;");
+    console.log("%c Current distance from top is:", "font-family: montserrat;");
+    console.log("%c" + pageYOffset, "color: white; background: #00cc80; padding: 0 15px; font-family: montserrat;");
+    
     
 
     navLi.forEach( li => {
@@ -39,8 +42,8 @@ if(li.classList.contains(current)){
 })
 
 
-console.log('There is also a script to take the user back to the top of the page when they click the #topButton element.');
-console.log('Thank you for visiting');
+console.log('%c There is also a script to take the user back to the top of the page when they click the #topButton element.', 'font-family: montserrat;');
+console.log('%c Thank you for visiting', 'font-family: montserrat;');
 
 
 //Get the button:
