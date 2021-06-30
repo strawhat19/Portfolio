@@ -105,7 +105,7 @@ nav ul {
 }
 
 .projects a:hover {
-    color: var(--soft-white);
+    color: rgb(255 255 255);
     background: var(--main-red);
     padding: 15px;
     border-right: 1px solid var(--grays);
@@ -211,7 +211,7 @@ hr {
 }
 
 #projects {
-    color: #fff;
+    color: #fff !important;
         background: repeating-linear-gradient( 
     90deg
      , var(--dark-blue) 1px, #0054bc 2px 213px);
@@ -259,6 +259,12 @@ hr {
 #projects .grid-row {
     column-gap: 50px;
     padding: 25px 0px; 
+}
+
+#projects .box {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 #projects .box h4 {
@@ -331,32 +337,49 @@ hr {
         transition: 150ms ease-in-out;
     }
 
-    .grid-row {
+    #projects .grid-row {
         width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        column-gap: 0px;
         transition: 150ms ease-in-out;
     }
 
     .grid-row .box {
         width: 50%;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         transition: 150ms ease-in-out;
     }
 
     #projects .box h4 {
       margin: 25px 0px;
+      transition: 150ms ease-in-out;
     }
 
     #projects .box hr {
         width: 100%;
         max-width: 300px;
+        transition: 150ms ease-in-out;
     }
 
     #projects .content img {
         margin: 0 auto;
+        border-radius: 0px;
+        width: 100%;
+        transition: 150ms ease-in-out;
+    }
+
+    a.project-link {
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 35px auto;
+        padding: 15px;
+        text-decoration: none;
+        border: 4px inset var(--main-red);
         transition: 150ms ease-in-out;
     }
 
