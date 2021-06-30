@@ -84,13 +84,24 @@ section {
 
 #about {
     color: black;
-    background: white;
+    background: repeating-linear-gradient(
+90deg
+, #e5e5e5 1px, white 2px 205px);
+}
+
+#projects {
+    background: repeating-linear-gradient( 
+        90deg
+         , #00164c 1px, #5e79bb 2px 205px);
 }
 
 
-
-.name-header {
+.header {
     display: block;
+}
+
+#projects .header {
+    text-align: right;
 }
 
 .bio {
@@ -104,4 +115,10 @@ section {
     letter-spacing: 2px;
     font-size: 19px;
     padding: 35px;
+}
+
+#contact {
+    background: repeating-linear-gradient( 
+90deg
+ , #36b9e1 1px, #00164c 2px 205px);
 }
