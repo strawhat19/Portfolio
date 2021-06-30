@@ -2,11 +2,17 @@
 
 /* Main Style Controller */
 
+
+/* Variables */
+
 :root {
     --main-blue: #00c2ff;
     --main-red: #ff172d;
     --main-green: #00cc80;
     --dark-blue: #00164c;
+    --soft-white: rgb(232, 230, 227);
+    --black-glass: rgb(0 0 0 / 50%);
+    --grays: rgb(48, 52, 54);
 }
 
 html {
@@ -20,7 +26,7 @@ scroll-behavior: smooth;
 body {
     background: #00164c;
     font-family: 'montserrat';
-    color: #fff;
+    color: var(--soft-white);
     width: 100vw;
     overflow-x: hidden;
     margin: 0 auto;
@@ -47,8 +53,8 @@ nav {
     position: -webkit-sticky;
     position: sticky;
  top: 0;
- border-top: 1px solid #fff;
- border-bottom: 1px solid #fff;
+ border-top: 1px solid var(--grays);
+ border-bottom: 1px solid var(--grays);
 }
 
 nav ul {
@@ -56,8 +62,7 @@ nav ul {
     flex-direction: row;
  justify-content: center;
  padding: 15px;
- /* background: linear-gradient(#000000, #011748); */
- background: rgb(0 0 0 / 50%);
+ background: var(--black-glass);
  backdrop-filter: blur(2px);
  list-style-type: none;
  margin: 0;
@@ -68,88 +73,89 @@ nav ul {
     padding: 0 15px;
     margin: 0 15px;
     text-decoration: none;
-    color: #fff;
+    color: var(--soft-white);
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
     transition: 150ms ease-in-out;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
 }
 
 .about a:hover {
-    color: #fff;
+    color: var(--soft-white);
     background: var(--main-green);
-    transition: 150ms ease-in-out;
     padding: 15px;
-    
+    transition: 150ms ease-in-out;
 }
 
 .about.active a {
-    color: #fff;
+    color: var(--soft-white);
     background: var(--main-green);
-    transition: 150ms ease-in-out;
     padding: 15px;
-    
+    transition: 150ms ease-in-out;
 }
 
 .about.active a:hover {
     color: var(--main-green);
-    background: #fff;
-    transition: 150ms ease-in-out;
+    background: rgb(24, 26, 27);
     padding: 15px;
-    
+    transition: 150ms ease-in-out;
 }
 
 .projects a:hover {
-    color: #fff;
+    color: var(--soft-white);
     background: var(--main-red);
-    transition: 150ms ease-in-out;
     padding: 15px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
 }
 
 .projects.active a {
-    color: #fff;
+    color: var(--soft-white);
     background: var(--main-red);
-    transition: 150ms ease-in-out;
     padding: 15px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
 }
 
 .projects.active a:hover {
     color: var(--main-red);
-    background: #fff;
-    transition: 150ms ease-in-out;
+    background: rgb(24, 26, 27);
     padding: 15px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
 }
 
 .contact a:hover {
-    color: #fff;
+    color: var(--soft-white);
     background: var(--main-blue);
-    transition: 150ms ease-in-out;
     padding: 15px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
 }
 
 .contact.active a {
-    color: #fff;
+    color: var(--soft-white);
     background: var(--main-blue);
-    transition: 150ms ease-in-out;
     padding: 15px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
 }
 
 .contact.active a:hover {
     color: var(--main-blue);
-    background: #fff;
-    transition: 150ms ease-in-out;
+    background: rgb(24, 26, 27);
     padding: 15px;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+    transition: 150ms ease-in-out;
 }
 
 main {
@@ -168,7 +174,6 @@ section {
 
 }
 
-
     h3 {
         letter-spacing: 5px;
     }
@@ -183,10 +188,11 @@ hr {
 }
 
 #about {
-    color: black;
-    background: repeating-linear-gradient(
-90deg
-, #e5e5e5 1px, white 2px 205px);
+    color: var(--soft-white);
+    background-image: repeating-linear-gradient( 
+        90deg
+         , rgb(48 52 54) 1px, rgb(24, 26, 27) 2px, rgb(24, 26, 27) 213px);
+    background-color: initial;
 }
 
 #about ::selection, #about hr {
@@ -197,7 +203,7 @@ hr {
 #projects {
     background: repeating-linear-gradient( 
         90deg
-         , var(--dark-blue) 1px, #5e79bb 2px 205px);
+         , var(--dark-blue) 1px, #5e79bb 2px 213px);
 }
 
 #projects ::selection, #projects hr {
@@ -264,7 +270,7 @@ hr {
 }
 
 #contact {
-    background: repeating-linear-gradient(90deg, var(--main-blue) 1px, #00164c 2px 205px);
+    background: repeating-linear-gradient(90deg, var(--main-blue) 1px, #00164c 2px 213px);
 }
 
 #contact ::selection, #contact hr {
@@ -292,4 +298,59 @@ footer {
     font-size: 45px;
 }
 
+}
+
+/* Scroll to Top Button CSS */
+
+#topButton{
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: 1px solid var(--grays); 
+    outline: none; 
+    background: rgb(0 0 0 / 50%);
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transform: rotate(-90deg); 
+    backdrop-filter: blur(2px);
+    transition: 150ms ease-in-out;
+  }
+  
+  #topButton:hover {
+    background-color: rgb(69 74 77 / 69%);
+    transition: 150ms ease-in-out;
+}
+
+
+  /* Scroll Bar CSS */
+
+  ::scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+
+  ::scrollbar-corner {
+    background-color: #181a1b;
+}
+
+  ::scrollbar-thumb {
+    background-color: #454a4d;
+}
+
+  ::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+
+  ::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
 }

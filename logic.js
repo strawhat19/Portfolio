@@ -1,23 +1,33 @@
 console.log('Hey there, welcome to my website!');
-console.log('This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation. Feel free to scroll and see the changes. Thank you for visiting');
+console.log('This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation. Feel free to scroll and see the changes.');
+
 
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li');
+var currentSection = pageYOffset;
+
+
 
 window.addEventListener('scroll', ()=> {
     let current = '';
 
+    
+
     sections.forEach( section => {
+        
 const sectionTop = section.offsetTop;
 const sectionHeight = section.clientHeight;
+
+
+
 if(pageYOffset >= (sectionTop - sectionHeight / 3)) {
     current = section.getAttribute('id');
-    console.log(current);
-    
-    console.log(pageYOffset);
 }
     })
 
+
+    console.log("Current section id and class: "+current);
+    console.log("Current distance from top is: "+pageYOffset);
     
 
     navLi.forEach( li => {
@@ -28,3 +38,27 @@ if(li.classList.contains(current)){
     })
 })
 
+
+console.log('There is also a script to take the user back to the top of the page when they click the #topButton element.');
+console.log('Thank you for visiting');
+
+
+//Get the button:
+mybutton = document.getElementById("topButton");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
