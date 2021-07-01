@@ -478,6 +478,36 @@ footer {
     background: black;
 }
 
+#demo {
+    padding: 20PX 0px 0px;
+}
+
+#demoButton {
+    color: #fff;
+    font-family: 'Montserrat';
+    letter-spacing: 1.8px;
+    background: var(--dark-blue);
+    outline: none;
+    border: 2px solid var(--main-blue);
+    padding: 15px;
+    transition: 150ms ease-in-out;
+}
+
+#demoButton:hover {
+    cursor: pointer;
+    background: #000;
+    border: 2px solid var(--main-blue);
+    transition: 150ms ease-in-out;
+}
+
+#demoButton:active {
+    background: var(--dark-blue);
+    border: 2px inset var(--main-blue);
+}
+
+#footer-text {
+    text-transform: uppercase;
+}
 
 /* Scroll to Top Button CSS */
 

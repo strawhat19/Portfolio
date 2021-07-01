@@ -6,12 +6,8 @@ const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li');
 var currentSection = pageYOffset;
 
-
-
 window.addEventListener('scroll', ()=> {
     let current = '';
-
-    
 
     sections.forEach( section => {
         
@@ -64,4 +60,13 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function getUsername() {
+
+var person = prompt("Please enter your name", "Enter name here");
+
+  document.getElementById("demoButton").innerHTML = "CLICK TO CHANGE NAME AGAIN"
+  document.getElementById("footer-text").innerHTML = "Thanks for Visiting " + person + "!";
+
 }
