@@ -320,26 +320,31 @@ hr {
 
 #Projects hr {
     width: 375px;
+    transition: 150ms ease-in-out;
 }
 
 #Projects .grid-row {
     column-gap: 50px;
-    padding: 25px 0px; 
+    padding: 25px 0px;
+    transition: 150ms ease-in-out; 
 }
 
 #Projects .box {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    transition: 150ms ease-in-out;
 }
 
 #Projects .box h4 {
     text-align: center;
+    transition: 150ms ease-in-out;
 }
 
 #Projects .box hr {
     width: 100%;
+    transition: 150ms ease-in-out;
 }
 
 #Projects .content img {
@@ -349,7 +354,35 @@ justify-content: center;
     max-width: 200px;
     max-height: 200px;
     min-height: 200px;
+    transition: 150ms ease-in-out;
 }
+
+#Projects .light-picture {
+    mix-blend-mode: difference;
+    transition: 150ms ease-in-out;
+}
+
+#Projects .piratechs-logo {
+    filter: hue-rotate(17deg);
+    transition: 150ms ease-in-out;
+}
+
+#Projects .total-asphalt-logo {
+    filter: hue-rotate(183deg);
+    transition: 150ms ease-in-out;
+}
+
+#Projects .light-logo-box .project-image:hover .total-asphalt-logo {
+    mix-blend-mode: screen;
+    filter: hue-rotate(354deg);
+    transition: 150ms ease-in-out;
+}
+
+#Projects .light-logo-box .project-image:hover .piratechs-logo {
+    mix-blend-mode: hard-light;
+    filter: hue-rotate(169deg);
+    transition: 150ms ease-in-out;
+} 
 
 /* Laptops */
 
@@ -360,6 +393,7 @@ justify-content: center;
         border-left: 5px inset var(--main-green);
         border-bottom: 5px inset var(--main-green);
         width: 69%;
+        transition: 150ms ease-in-out;
     }
 
 }
@@ -526,7 +560,7 @@ footer {
     color: var(--main-blue);
     color: var(--soft-white);
     cursor: pointer;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 10px;
     font-size: 18px;
     font-size: 'montserrat';
