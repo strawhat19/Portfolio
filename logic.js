@@ -6,6 +6,7 @@ const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li');
 var currentSection = pageYOffset;
 
+
 window.addEventListener('scroll', ()=> {
     let current = '';
 
@@ -43,17 +44,42 @@ console.log('%c Thank you for visiting', 'font-family: montserrat;  font-size: 1
 
 
 //Get the button:
-mybutton = document.getElementById("topButton");
+topButton = document.getElementById("topButton");
+topButton.className = '';
+
+function changeButton() {
+  topButton.classList.add('blueMode');
+}
+
+window.scroll = function() {changeButton()};
+
+if (pageYOffset > 450) {
+  changeButton();
+} else {
+  topButton.classList.remove('blueMode');
+}
+
+
+
+// function buttonChange() {
+//   if (pageYOffset >= 450) {
+//     topButton.classList.add('blueMode');
+//     console.log('Fired');
+//   }
+// }
+
+// buttonChange();
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    topButton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    topButton.style.display = "none";
   }
+  
 }
 
 // When the user clicks on the button, scroll to the top of the document
@@ -61,6 +87,8 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
 
 function getUsername() {
 
