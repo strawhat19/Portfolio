@@ -584,7 +584,7 @@ footer {
     outline: none;
     border: none;
     padding: 15px;
-    transition: 150ms ease-in-out;
+    transition: 1000ms ease-in-out;
 }
 
 #demoButton::after {
@@ -597,19 +597,19 @@ footer {
     background: var(--main-blue);
     transform: scale(0,1);
     transform-origin: 0% 100%;
-    transition: 150ms ease-in-out;
+    transition: 1000ms ease-in-out;
 }
 
 #demoButton:hover::after {
     transform: scale(1, 1);
-    transition: 150ms ease-in-out;
+    transition: 1000ms ease-in-out;
 }
 
 #demoButton:hover {
     cursor: pointer;
     background: #000;
     border: none;
-    transition: 150ms ease-in-out;
+    transition: 1000ms ease-in-out;
 }
 
 #demoButton:active {
