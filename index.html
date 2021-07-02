@@ -122,9 +122,13 @@
 
 
 <footer class="footer" id="footer">
-    <h4 class="footer-text" id="footer-text">Thanks For Visiting!</h4>
+    <h4 class="footer-text" id="footer-text">Thanks For Visiting<a id="insertName" onclick="getUsername()"></a>!</h4>
     <p class="copyright-info">Ricky Ahmed | © Copyright 2021</p>
-    <div id="demo"><button onclick="getUsername()" id="demoButton" title="Prompt Username">USE YOUR NAME TO AFFECT THE PAGE</button></div>
+    <div id="demo">
+        <div class="buttonAnimationContainer">
+            <button onclick="getUsername()" id="demoButton" title="Prompt Username">USE YOUR NAME TO AFFECT THE PAGE</button>
+        </div>
+    </div>
     <button onclick="topFunction()" id="topButton" class="no-class" title="Go to top">></button>
 </footer>
 

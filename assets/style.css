@@ -266,7 +266,7 @@ hr {
     color: var(--soft-white);
     background-image: repeating-linear-gradient( 
         90deg
-         , rgb(48 52 54) 1px, rgb(24, 26, 27) 2px, rgb(24, 26, 27) 213px);
+         , rgb(24 26 27) 1px, rgb(24, 26, 27) 2px, rgb(24, 26, 27) 213px);
     background-color: initial;
 }
 
@@ -276,10 +276,10 @@ hr {
 }
 
 #Projects {
-    background: repeating-linear-gradient( 
-90deg
- , #dcdcdc 1px, #ffffff 2px 213px);
-    color: rgb(0 0 0) !important;
+    background: repeating-linear-gradient(
+        45deg
+        , rgb(220, 220, 220) 1px, rgb(255, 255, 255) 2px, rgb(237 237 237) 213px);
+        color: #000;
 }
 
 #Projects ::selection, #Projects hr {
@@ -383,6 +383,18 @@ hr {
     filter: hue-rotate(169deg);
     transition: 150ms ease-in-out;
 } 
+
+a.project-link.project-image {
+    transition: 300ms ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 0 9px #c1c1c1;
+}
+
+a.project-link.project-image:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 9px 9px #dbdbdb;
+    transition: 300ms ease-in-out;
+}
 
 /* Laptops */
 
@@ -498,7 +510,10 @@ hr {
 }
 
 #Contact {
-    background: repeating-linear-gradient(90deg, var(--main-blue) 1px, #00164c 2px 213px);
+    /* background: repeating-linear-gradient(90deg, var(--main-blue) 1px, #00164c 2px 213px); */
+    background-image: repeating-linear-gradient( 
+45deg
+ , rgb(44, 47, 49) 1px, rgb(24, 26, 27) 2px, rgb(34, 37, 38) 213px);
 }
 
 #Contact ::selection, #Contact hr {
@@ -519,21 +534,81 @@ footer {
     padding: 20PX 0px 0px;
 }
 
+.buttonAnimationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#insertName {
+    position: relative;
+}
+
+#insertName::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: var(--main-blue);
+    transform-origin: 0% 100%;
+    animation: underlineLeft 1000ms ease-in-out;
+    animation-iteration-count: 1;
+    transition: 150ms ease-in-out;
+}
+
+#insertName:hover::after {
+    transform-origin: 0% 100%;
+    animation: underlineLeft 1000ms ease-in-out infinite alternate;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+
+@keyframes underlineLeft {
+    0% {
+        transform: scale(0,1);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
 #demoButton {
     color: #fff;
+    position: relative;
     font-family: 'Montserrat';
     letter-spacing: 1.8px;
     background: var(--dark-blue);
     outline: none;
-    border: 2px solid var(--main-blue);
+    border: none;
     padding: 15px;
+    transition: 150ms ease-in-out;
+}
+
+#demoButton::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: var(--main-blue);
+    transform: scale(0,1);
+    transform-origin: 0% 100%;
+    transition: 150ms ease-in-out;
+}
+
+#demoButton:hover::after {
+    transform: scale(1, 1);
     transition: 150ms ease-in-out;
 }
 
 #demoButton:hover {
     cursor: pointer;
     background: #000;
-    border: 2px solid var(--main-blue);
+    border: none;
     transition: 150ms ease-in-out;
 }
 

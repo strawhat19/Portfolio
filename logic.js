@@ -78,7 +78,8 @@ function getUsername() {
 
 var person = prompt("Please enter your name", "Enter name here");
 
-  document.getElementById("demoButton").innerHTML = "CLICK TO CHANGE NAME AGAIN"
-  document.getElementById("footer-text").innerHTML = "Thanks for Visiting " + person + "!";
+  document.getElementById("demoButton").innerHTML = "CLICK TO CHANGE NAME AGAIN";
+  document.getElementById("footer-text").innerHTML = "THANKS FOR VISITING " + '<a id="insertName" onclick="getUsername()"></a>';
+  document.getElementById("insertName").innerHTML = person + "!";
 
 }
