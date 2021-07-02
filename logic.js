@@ -50,7 +50,7 @@ topButton.className = '';
 // Change Button Color on Scroll
 window.addEventListener('scroll', function () {
  topButton.classList.toggle('redMode', window.scrollY > 350);
- topButton.classList.toggle('blueMode', window.scrollY > 1000);
+ topButton.classList.toggle('blueMode', window.scrollY > 1100);
 })
 
 
