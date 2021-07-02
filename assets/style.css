@@ -579,6 +579,21 @@ footer {
     transition: 300ms ease-in-out;
 }
 
+#topButton.redMode {
+    border: 2px solid var(--main-red);
+    background: rgb(88 0 8 / 80%);
+    color: var(--soft-white);
+    transition: 300ms ease-in-out;
+}
+  
+#topButton.redMode:hover {
+    color: #fff;
+    background: rgb(88 0 8 / 80%);
+    box-shadow: 0 0 10px var(--main-red);
+    border: 2px solid var(--main-red);
+    transition: 300ms ease-in-out;
+}
+
 #topButton.blueMode {
     border: 2px solid var(--main-blue);
     background: rgb(0 22 76 / 80%);

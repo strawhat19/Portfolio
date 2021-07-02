@@ -47,34 +47,18 @@ console.log('%c Thank you for visiting', 'font-family: montserrat;  font-size: 1
 topButton = document.getElementById("topButton");
 topButton.className = '';
 
-function changeButton() {
-  topButton.classList.add('blueMode');
-}
+// Change Button Color on Scroll
+window.addEventListener('scroll', function () {
+ topButton.classList.toggle('redMode', window.scrollY > 350);
+ topButton.classList.toggle('blueMode', window.scrollY > 1000);
+})
 
-window.scroll = function() {changeButton()};
-
-if (pageYOffset > 450) {
-  changeButton();
-} else {
-  topButton.classList.remove('blueMode');
-}
-
-
-
-// function buttonChange() {
-//   if (pageYOffset >= 450) {
-//     topButton.classList.add('blueMode');
-//     console.log('Fired');
-//   }
-// }
-
-// buttonChange();
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     topButton.style.display = "block";
   } else {
     topButton.style.display = "none";
