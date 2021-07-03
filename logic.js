@@ -76,7 +76,7 @@ function topFunction() {
 
 function getUsername() {
 
-var person = prompt("Please enter your name", "Enter name here");
+var person = prompt("Please enter your name");
 
   document.getElementById("demoButton").innerHTML = "CLICK TO CHANGE NAME AGAIN";
   document.getElementById("footer-text").innerHTML = "THANKS FOR VISITING " + '<a id="insertName" onclick="getUsername()"></a>';

@@ -544,6 +544,7 @@ footer {
 
 #insertName {
     position: relative;
+    color: #ffffff;
 }
 
 #insertName::after {
