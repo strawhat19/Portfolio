@@ -651,8 +651,6 @@ footer {
     background-color: rgb(0 120 75 / 80%);
     border-color: var(--main-green);
     color: #fff;
-    
-    
     transition: 300ms ease-in-out;
 }
 

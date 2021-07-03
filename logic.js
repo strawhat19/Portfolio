@@ -19,6 +19,7 @@ const sectionHeight = section.clientHeight;
 
 if(pageYOffset >= (sectionTop - sectionHeight / 4)) {
     current = section.getAttribute('id');
+    
 }
     })
 
@@ -54,7 +55,7 @@ window.addEventListener('scroll', function () {
 })
 
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 0px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
