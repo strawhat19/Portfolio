@@ -44,9 +44,11 @@ console.log('%c Feel free to scroll and see the changes.', 'font-family: montser
 console.log('%c Thank you for visiting', 'font-family: montserrat;  font-size: 15px;');
 
 
-//Get the button:
+// Get the button:
 topButton = document.getElementById("topButton");
 topButton.className = '';
+
+// Initialize section top calculations
 
 // Change Button Color on Scroll
 window.addEventListener('scroll', function () {
