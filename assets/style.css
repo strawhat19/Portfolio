@@ -20,7 +20,7 @@ scroll-behavior: smooth;
 }
 
 body {
-    background: #00164c;
+    background: #000;
     font-family: 'montserrat';
     color: var(--soft-white);
     width: 100vw;
