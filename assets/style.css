@@ -399,7 +399,7 @@ a.project-link.project-image:hover {
 
 /* Laptops */
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1501px) {
 
     #About .content p {
         padding: 0 0 35px 70px;
@@ -411,7 +411,7 @@ a.project-link.project-image:hover {
 
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
 
     .header,  #Projects .header {
         text-align: center;
