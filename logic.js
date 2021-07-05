@@ -49,11 +49,17 @@ topButton = document.getElementById("topButton");
 topButton.className = '';
 
 // Initialize section top calculations
+projectsSection = document.getElementById("Projects");
+projectsRectTop = projectsSection.getBoundingClientRect().top;
+console.log(projectsRectTop);
+contactSection = document.getElementById("Contact");
+contactRectTop = contactSection.getBoundingClientRect().top;
+console.log(contactRectTop);
 
 // Change Button Color on Scroll
 window.addEventListener('scroll', function () {
- topButton.classList.toggle('redMode', window.scrollY > 350);
- topButton.classList.toggle('blueMode', window.scrollY > 1100);
+ topButton.classList.toggle('redMode', window.scrollY > projectsRectTop - 500 && window.scrollY < contactRectTop);
+ topButton.classList.toggle('blueMode', window.scrollY > contactRectTop - 500);
 })
 
 
