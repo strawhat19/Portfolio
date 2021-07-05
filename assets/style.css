@@ -37,7 +37,7 @@ body {
     font-size: 75px;
     padding: 55px;
     margin: 0;
-    background: url(./Images/Ocean-Stars.jpg);
+    background: linear-gradient(rgb(0 204 128 / 85%),rgb(0 120 75 / 0%)), url(./Images/Ocean-Stars.jpg);
     background-position: 50% 0%;
     background-attachment: fixed;
     position: sticky;
