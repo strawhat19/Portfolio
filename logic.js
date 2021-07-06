@@ -16,8 +16,10 @@ const openInterests = document.getElementById("interestsLink");
 const interestsAccordion = document.getElementById("interestsAccordion");
 
 function openInterestsList() {
+	var interestsList = document.getElementById("interestsList");
 	interestsAccordion.classList.toggle("open-interests-list");
 	openInterests.classList.toggle("clicked");
+	interestsList.classList.toggle("openList");
 }
 
 console.log('%c Hey there, welcome to my website.', 'font-family: montserrat; font-size: 15px;');

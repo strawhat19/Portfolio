@@ -173,7 +173,7 @@
     <br>
 
 <!-- Contact Form -->
-    <div class="content contact-form">
+    <div class="content contact-form" id="contactForm">
 
         <div class="container">
 
@@ -188,31 +188,21 @@
                 <ul>
                   
                   <li>
-                    <p class="left">
-                      <label for="first_name">first name</label>
-                      <input type="text" name="first_name" placeholder="John" />
-                    </p>
-                    <p class="pull-right">
-                      <label for="last_name">last name</label>
-                      <input type="text" name="last_name" placeholder="Smith" />      
-                    </p>
+                    <input type="text" name="first_name" placeholder="Jon Snow"/>
                   </li>
                   
                   <li>
-                    <p>
-                      <label for="email">email <span class="req">*</span></label>
-                      <input type="email" name="email" placeholder="john.smith@gmail.com" />
-                    </p>
-                  </li>        
+                    <input type="email" name="email" placeholder="Jon.snow@gmail.com"/>
+                  </li>
+
                   <li><div class="divider"></div></li>
                   <li>
-                    <label for="comments">comments</label>
-                    <textarea cols="46" rows="3" name="comments"></textarea>
+                
+                    <textarea cols="46" rows="3" name="comments" placeholder="Enter Message Here"></textarea>
                   </li>
                   
                   <li>
-                    <input class="btn btn-submit" type="submit" value="Submit" />
-                    <small>or press <strong>enter</strong></small>
+                    <input class="btn btn-submit" type="submit" value="Submit"/>
                   </li>
                   
                 </ul>
@@ -231,22 +221,22 @@
             </div>
 
             <div class="social-with-text">
-                <a href="https://www.linkedin.com/in/rakib-ahmed19/" class="nav-link linkedInLink" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a><h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/rakib-ahmed19/" class="nav-link linkedInLink" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a><h4>LinkedIn - Rakib Ahmed</h4>
             </div>
 
             <div class="social-with-text">
-                <a href="mailto:rahmed@piratechs.com" class="nav-link emailLink" title="Email"  target="_blank"><i class="fas fa-envelope"></i></a><h4>Email Me - rahmed@piratechs.com</h4>
+                <a href="mailto:rahmed@piratechs.com" class="nav-link emailLink" title="Email"  target="_blank"><i class="fas fa-envelope"></i></a><h4>Email - rahmed@piratechs.com</h4>
             </div>
 
             <div class="social-with-text">
-                <a href="https://piratechs.com/" class="nav-link piratechsLink" title="Piratechs" target="_blank"><i class="fas fa-share-alt-square"></i></a><h4>My Official Website - Piratechs.com</h4>
+                <a href="https://piratechs.com/" class="nav-link piratechsLink" title="Piratechs" target="_blank"><i class="fas fa-share-alt-square"></i></a><h4>Official Website - Piratechs.com</h4>
             </div>
 
             <div class="social-with-text">
-                <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a><h4>My Github Repo - Portfolio</h4>
+                <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a><h4>Github Repo - Portfolio</h4>
             </div>
 
-            <div class="social-with-text">
+            <div class="social-with-text" id="interestsList">
                 <a id="interestsLink" onclick="openInterestsList()" class="nav-link interestsLink" title="Interests">
 
                         <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
@@ -255,16 +245,51 @@
 
                 </a>
                     
-                    <h4> My Interests - Discussion</h4>
+                    <h4> My Interests</h4>
                     <ul class="interestsAccordion" id="interestsAccordion">
                         <li class="interestData">HTML</li>
-                        <li class="interestData">CSS</li>
-                        <li class="interestData">Javascript</li>
                         <li class="interestData">PHP</li>
+                        <li class="interestData">Java</li>
+                        <li class="interestData">CSS</li>
                         <li class="interestData">jQuery</li>
                         <li class="interestData">C#</li>
-                        <li class="interestData">Java</li>
+                        <li class="interestData">Javascript</li>
+                        <li class="interestData">Unity</li>
                         <li class="interestData">Python</li>
+                        <li class="interestData">Photoshop</li>
+                        <li class="interestData">Microsoft Office</li>
+                        <li class="interestData">Illustrator</li>
+                        <li class="interestData">After Effects</li>
+                        <li class="interestData">Visual Studio Code</li>
+                        <li class="interestData">Lightroom CC</li>
+                        <li class="interestData">Swift</li>
+                        <li class="interestData">Premiere</li>
+                        <li class="interestData">React.js</li>
+                        <li class="interestData">Node.js</li>
+                        <li class="interestData">Angular.js</li>
+                        <li class="interestData">Vue.js</li>
+                        <li class="interestData">Google+</li>
+                        <li class="interestData">Wordpress</li>
+                        <li class="interestData">Webflow</li>
+                        <li class="interestData">Weebly</li>
+                        <li class="interestData">Wix</li>
+                        <li class="interestData">GoDaddy</li>
+                        <li class="interestData">Hubspot</li>
+                        <li class="interestData">Slack</li>
+                        <li class="interestData">Discord</li>
+                        <li class="interestData">Monday.com</li>
+                        <li class="interestData">Editor X</li>
+                        <li class="interestData">JS Composer</li>
+                        <li class="interestData">Elementor</li>
+                        <li class="interestData">Games</li>
+                        <li class="interestData">Mobile Apps</li>
+                        <li class="interestData">Web Dev</li>
+                        <li class="interestData">Web Design</li>
+                        <li class="interestData">Adobe XD</li>
+                        <li class="interestData">Figma</li>
+                        <li class="interestData">Google Drive</li>
+                        <li class="interestData">Codepen</li>
+                        <li class="interestData">Ruby</li>
                     </ul>
             </div>
     
