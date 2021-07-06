@@ -1384,8 +1384,12 @@ a.project-link.project-image:hover {
 /* Larger iPads and Tablets */
 @media screen and (max-width: 992px) {
 
-    main {
-        padding-right: 20px;
+    section {
+        padding: 40px 60px 40px 40px !important;
+    }
+
+    hr {
+        width: 100%;
     }
 
     .opening-header {
@@ -1452,6 +1456,16 @@ a.project-link.project-image:hover {
         font-size: 36px;
     }
 
+    #Projects .sanctuary-image-link {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        height: 0px !important;
+        max-height: 0px !important;
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+    }
+
 }
 
 /* Smaller Screens */
@@ -1463,6 +1477,10 @@ a.project-link.project-image:hover {
 
     h2, h3 {
         font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
     }
 
     #Projects .featured-project hr {
@@ -1638,6 +1656,23 @@ div, textarea, input {
   }
   
   @media only screen and (max-width: 480px) {
+
+    body {
+        width: 108vw;
+    }
+
+    section {
+        padding: 40px 20px 40px 40px !important;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+
+    #Projects hr {
+        width: 100%;
+    }
+
     .pull-right {
       float: none;
     }
