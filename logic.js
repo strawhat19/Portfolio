@@ -10,14 +10,7 @@ function openMobileMenu() {
 	menuToggler.classList.toggle("clicked");
 }
 
-// function closeMobileMenu() {
-// 	var mobileMenuOpen = document.getElementById("desktopMenu");
-// 	var menuToggle = document.getElementById("menuToggle");
-// 	mobileMenuOpen.classList.toggle("open-mobile-menu");
-// 	menuToggle.innerHTML = '<a class="openMenuToggler" onclick="openMobileMenu()"><span></span><span></span><span></span></a>'
-// }
-
-console.log('%c Hey there, welcome to my website!', 'font-family: montserrat; font-size: 15px;');
+console.log('%c Hey there, welcome to my website.', 'font-family: montserrat; font-size: 15px;');
 console.log('%c This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation.', 'font-family: montserrat; font-size: 15px;');
 
 
@@ -35,19 +28,11 @@ const sectionTop = section.offsetTop;
 const sectionHeight = section.clientHeight;
 
 
-
 if(pageYOffset >= (sectionTop - sectionHeight / 4)) {
     current = section.getAttribute('id');
     
 }
     })
-
-    // console.log("%c Current section id and class:", "font-family: montserrat; font-size: 15px;");
-    // console.log("%c" + current, "color: white; background: #00c2ff; padding: 0 15px; font-family: montserrat; font-size: 15px;");
-    // console.log("%c Current distance from top is:", "font-family: montserrat; font-size: 15px;");
-    // console.log("%c" + pageYOffset, "color: white; background: #00cc80; padding: 0 15px; font-family: montserrat; font-size: 15px;");
-    
-    
 
     navLi.forEach( li => {
         li.classList.remove('active');
@@ -128,6 +113,7 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
+// // I just thought this code was cool
 // // Code injected by live-server
 
 // 	// <![CDATA[  <-- For SVG support

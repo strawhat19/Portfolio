@@ -1,30 +1,16 @@
+/* Imported Fonts from Google Fonts */
+
+/* Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Caveat */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 
 /* Main Style Controller */
-
-::selection {
-    background: #181a1b;
-}
-
-/* Variables */
-
-:root {
-    --main-blue: #00c2ff;
-    --main-red: #ff172d;
-    --main-green: #00cc80;
-    --dark-blue: #00164c;
-    --soft-white: rgb(232, 230, 227);
-    --black-glass: rgb(0 0 0 / 50%);
-    --grays: rgb(48, 52, 54);
-}
-
-
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-
+    
 body {
     background: #000;
     font-family: 'montserrat';
@@ -33,11 +19,66 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
     box-sizing: border-box;
-   width: 100vw;
+    width: 100vw;
+}
+
+/* Color of Highlight by User Selection */
+::selection {
+    background: #181a1b;
+}
+
+    /* Variables */
+    :root {
+        --main-blue: #00c2ff;
+        --main-red: #ff172d;
+        --main-green: #00cc80;
+        --dark-blue: #00164c;
+        --soft-white: rgb(232, 230, 227);
+        --black-glass: rgb(0 0 0 / 50%);
+        --grays: rgb(48, 52, 54);
+    }
+
+/* Main Content Styling */
+main {
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 15px;
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 10px auto;
+}
+
+hr {
+    width: 395px;
+    border-width: 3px;
+    margin: 0;
+}
+    
+/* Responsive Spacing */
+    
+@media screen and (max-width: 992px) {
+
+    section {
+        padding: 100px 110px;
+    }
+
 }
 
 /* Nav Styling */
-
 nav {
     background: var(--black-glass);
     position: fixed;
@@ -69,10 +110,10 @@ nav ul {
     display: flex;
     flex-direction: row;
     place-items: center;
- justify-content: center;
- padding: 15px;
- list-style-type: none;
- margin: 0;
+    justify-content: center;
+    padding: 15px;
+    list-style-type: none;
+    margin: 0;
 }
 
 .nav-link a {
@@ -89,7 +130,7 @@ nav ul {
     transition: 150ms ease-in-out;
 }
 
-/* Mobile Menu */
+/* Mobile Menu+ */
 
 @media screen and (min-width: 992px) {
 
@@ -102,6 +143,8 @@ nav ul {
     }
 
 }
+
+/* Mobile - Tablet */
 
 @media screen and (max-width: 992px) {
 
@@ -157,50 +200,48 @@ nav ul {
         background: #000;
     }
 
-#menuToggle span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    margin-bottom: 5px;
-    position: relative;
-    background: var(--soft-white);
-    border-radius: 0px;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
+    #menuToggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-bottom: 5px;
+        position: relative;
+        background: var(--soft-white);
+        border-radius: 0px;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.   2,0.05,1.0);
+    }
 
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
 
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
 
-#openMenuToggler.clicked span {
-    opacity: 1;
-    transform: rotate(-45deg) translate(0px, 0px);
-}
+    #openMenuToggler.clicked span {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0px, 0px)   ;
+    }
 
-#openMenuToggler.clicked span:nth-last-child(2) {
-    transform: rotate(45deg) translate(-3px, -4px);
-}
+    #openMenuToggler.clicked span:nth-last-child(2) {
+        transform: rotate(45deg) translate(-3px,    -4px);
+    }
 
-#openMenuToggler.clicked span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(
-0deg
-) scale(0.2, 0.2);
-}
+    #openMenuToggler.clicked span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
 
-.About, .Projects, .Contact {
-    border-bottom: 1px solid var(--grays);
-}
+    .About, .Projects, .Contact {
+        border-bottom: 1px solid var(--grays);
+    }
 
     .openMenu {
         color: var(--soft-white);
         border-right: 1px solid var(--grays);
-    border-left: 1px solid var(--grays);
+        border-left: 1px solid var(--grays);
         border-radius: 0;
         transition: 300ms ease-in-out;
     }
@@ -257,14 +298,14 @@ nav ul {
     .closeMenu {
         color: var(--soft-white);
         border-right: 1px solid var(--grays);
-    border-left: 1px solid var(--grays);
+        border-left: 1px solid var(--grays);
         border-radius: 0;
         transition: 300ms ease-in-out;
     }
 
     .closeMenu:hover {
         border-right: 1px solid var(--grays);
-    border-left: 1px solid var(--grays);
+        border-left: 1px solid var(--grays);
         border-radius: 0;
         transition: 300ms ease-in-out;
     }
@@ -330,7 +371,6 @@ nav ul {
 }
 
 /* Header Styling */
-
 .opening-header {
     text-align: center;
     font-size: 75px;
@@ -491,46 +531,6 @@ nav .Projects.active a:hover {
     transition: 150ms ease-in-out;
 }
 
-main {
-    margin: 0 auto;
-}
-
-section {
-    padding: 100px 200px;
-}
-
-h2, h3 {
-    margin: 0;
-    padding: 15px;
-    font-size: 28px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
-
-h4 {
-    font-size: 22px;
-    text-align: center;
-    letter-spacing: 2px;
-    margin: 10px auto;
-}
-
-hr {
-    width: 395px;
-    border-width: 3px;
-    margin: 0;
-}
-
-
-
-@media screen and (max-width: 992px) {
-
-    section {
-        padding: 100px 110px;
-    }
-
-}
-
-
 #About {
     color: var(--soft-white);
     background-image: repeating-linear-gradient( 
@@ -579,7 +579,6 @@ hr {
     border-radius: 100px;
     width: 20%;
 }
-
 
 .content p {
     letter-spacing: 2px;
