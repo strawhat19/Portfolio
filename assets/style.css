@@ -111,7 +111,7 @@ nav li {
     font-size: 15px;
     font-weight: 600;
     color: #181a1b;
-    transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 nav ul {
@@ -135,7 +135,7 @@ nav ul {
     letter-spacing: 1px;
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 /* Contact & Footer Social Icons */
@@ -171,8 +171,6 @@ nav ul {
     opacity: 1;
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
-
-
 
 #socialLinksFooter {
     margin-top: 35px;
@@ -378,7 +376,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
     .mobile-menu {
         font-size: 15px;
         padding: 0px 15px;
-        transition: 300ms ease-in-out;
+            transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .mobile-menu:hover {
@@ -386,7 +384,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         cursor: pointer;
         background: var(--soft-white);
         color: #181a1b;
-        transition: 300ms ease-in-out;
+           transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #menuToggle {
@@ -396,7 +394,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         padding: 0px 15px 0px 15px;
         margin: 0px;
         place-items: center;
-        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #menuToggle:hover {
@@ -408,11 +406,11 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         padding: 14px 15px;
         margin: 0px;
         place-items: center;
-        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #menuToggle:hover span {
-        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
         background: #000;
     }
 
@@ -425,7 +423,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         background: var(--soft-white);
         border-radius: 0px;
         transform-origin: 4px 0px;
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #menuToggle span:first-child:first-child {
@@ -459,7 +457,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         border-right: 1px solid var(--grays);
         border-left: 1px solid var(--grays);
         border-radius: 0;
-        transition: 300ms ease-in-out;
+           transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .closeMenu {
@@ -467,14 +465,14 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         border-right: 1px solid var(--grays);
         border-left: 1px solid var(--grays);
         border-radius: 0;
-        transition: 300ms ease-in-out;
+            transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .closeMenu:hover {
         border-right: 1px solid var(--grays);
         border-left: 1px solid var(--grays);
         border-radius: 0;
-        transition: 300ms ease-in-out;
+            transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .desktop-menu-option {
@@ -486,7 +484,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         top: -450%;
         left: 0;
         right: 0;
-        transition: 500ms ease-in-out;
+            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .desktop-menu-option .nav-link {
@@ -514,7 +512,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         left: 0;
         right: 0;
         z-index: -5;
-        transition: 500ms ease-in-out;
+            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         border-bottom: 1px solid var(--grays);
         background: rgb(0 0 0 / 82%);
     }
@@ -555,21 +553,21 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
     color: var(--soft-white);
     background: var(--main-green);
     padding: 15px;
-    transition: 150ms ease-in-out;
+       transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .About.active a {
     color: var(--soft-white);
     background: var(--main-green);
     padding: 15px;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .About.active a:hover {
     color: var(--main-green);
     background: rgb(24, 26, 27);
     padding: 15px;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects a {
@@ -582,13 +580,12 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
     width: auto;
     max-width: 200px;
     max-height: 200px;
-   
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects a:hover {
     color: #fff;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 a.project-link.project-button {
@@ -598,77 +595,77 @@ a.project-link.project-button {
 .project-link a {
     padding: 15px;
     border: 4px inset var(--main-red) !important;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .Projects a:hover {
     color: #fff;
     background: #ab0f1e;
     padding: 15px;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 nav .Projects a:hover {
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 nav .Projects.active a {
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 nav .Projects.active a:hover {
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 nav .Projects.active a:hover {
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .Projects.active a {
     color: var(--soft-white);
     background: var(--main-red);
     padding: 15px;
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .Projects.active a:hover {
     color: var(--main-red);
     background: rgb(24, 26, 27);
     padding: 15px;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .project-link a {
     border: 4px inset var(--main-red) !important;
     box-shadow: 0 0 4px 0px black;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .project-link a:hover {
     color: #fff;
     border: 4px inset var(--main-red) !important;
     box-shadow: 0 0 4px 0px black;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .project-link a:hover {
     color: #fff;
     border: 4px inset var(--main-red) !important;
     box-shadow: 0 0 4px 0px black;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .project-link a:active {
     border: 4px inset var(--main-red) !important;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .Contact .social-with-text {
@@ -699,7 +696,7 @@ nav .Projects.active a:hover {
     padding: 15px;
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .Contact.active a {
@@ -708,7 +705,7 @@ nav .Projects.active a:hover {
     padding: 15px;
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .Contact.active a:hover {
@@ -717,7 +714,7 @@ nav .Projects.active a:hover {
     padding: 15px;
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #About {
@@ -775,18 +772,18 @@ nav .Projects.active a:hover {
     line-height: 1.8;
     padding: 35px;
     font-weight: 500;
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects hr {
     width: 375px;
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .grid-row {
     column-gap: 50px;
     padding: 25px 0px;
-    transition: 150ms ease-in-out; 
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0); 
 }
 
 #Projects .featured-project {
@@ -831,17 +828,17 @@ transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .box h4 {
     text-align: center;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .box hr {
     width: 100%;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .content img {
@@ -851,38 +848,38 @@ transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     max-width: 200px;
     max-height: 200px;
     min-height: 200px;
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .light-picture {
     mix-blend-mode: difference;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .piratechs-logo {
     filter: hue-rotate(17deg);
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .total-asphalt-logo {
     filter: hue-rotate(183deg);
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .light-logo-box .project-image:hover .total-asphalt-logo {
     mix-blend-mode: screen;
     filter: hue-rotate(354deg);
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Projects .light-logo-box .project-image:hover .piratechs-logo {
     mix-blend-mode: hard-light;
     filter: hue-rotate(169deg);
-    transition: 150ms ease-in-out;
+   transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 } 
 
 a.project-link.project-image {
-    transition: 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     border-radius: 10px;
     box-shadow: 0 0 9px #c1c1c1;
     min-width: 200px;
@@ -894,7 +891,7 @@ a.project-link.project-image {
 a.project-link.project-image:hover {
     border-radius: 10px;
     box-shadow: 0 0 9px 9px #dbdbdb;
-    transition: 300ms ease-in-out;
+     transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 /* Laptops */
@@ -914,7 +911,7 @@ a.project-link.project-image:hover {
         border-left: 5px inset var(--main-green);
         border-bottom: 5px inset var(--main-green);
         width: 69%;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .opening-header {
@@ -961,7 +958,7 @@ a.project-link.project-image:hover {
         text-align: center;
         max-width: 700px;
         margin: 0 auto;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .header {
@@ -978,34 +975,34 @@ a.project-link.project-image:hover {
     hr {
         width: 395px;
         float: none !important;
-        transition: 150ms ease-in-out;
+       transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .content {
         display: flex;
         padding: 35px 0px;
        flex-wrap: wrap;
-       transition: 150ms ease-in-out;
+      transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #About .content {
         display: flex;
         flex-direction: column;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .content p {
     padding: 35px 0px;
     text-align: center;
     /* text-transform: uppercase; */
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #About .content p {
         padding: 35px 0px;
         text-align: left;
         /* text-transform: uppercase; */
-        transition: 150ms ease-in-out;
+       transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
         display: inline-block;
     }
 
@@ -1014,7 +1011,7 @@ a.project-link.project-image:hover {
         max-height: 400px;
         width: auto;
         margin: 0 auto;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #Projects .grid-row {
@@ -1026,14 +1023,14 @@ a.project-link.project-image:hover {
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 0px;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     .grid-row .box {
         width: 50%;
         flex-direction: column;
         flex-wrap: wrap;
-        transition: 150ms ease-in-out;
+       transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #Projects .box h4 {
@@ -1045,21 +1042,21 @@ a.project-link.project-image:hover {
         width: 100%;
         margin: -10px auto 20px;
         max-width: 300px;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #Projects .featured-project hr {
         width: 100%;
         margin: -10px auto 20px;
         max-width: 760px;
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #Projects .content img {
         margin: 0 auto;
         border-radius: 0px;
         width: 100%;
-        transition: 150ms ease-in-out;
+       transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     a.project-link {
@@ -1071,7 +1068,7 @@ a.project-link.project-image:hover {
         padding: 15px;
         text-decoration: none;
         border: 4px inset var(--main-red);
-        transition: 150ms ease-in-out;
+        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     a.project-image {
@@ -1166,7 +1163,7 @@ a.project-link.project-image:hover {
 #Projects .dapLogo {
     animation: spinAround 5000ms ease-in-out infinite alternate;
     position: relative;
-    transition: 5000ms ease-in-out;
+    transition: 5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 @keyframes spinAround {
@@ -1196,7 +1193,7 @@ a.project-link.project-image:hover {
     transform: scale(1.1);
     transform-origin: center;
     display: block;
-    transition: 5000ms ease-in-out;
+     transition: 5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #Contact {
@@ -1238,14 +1235,14 @@ a.project-link.project-image:hover {
     transform-origin: 0% 100%;
     animation: underlineLeft 1000ms ease-in-out;
     animation-iteration-count: 1;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #insertName:hover::after {
     transform-origin: 0% 100%;
     animation: underlineLeft 1000ms ease-in-out infinite alternate;
     cursor: pointer;
-    transition: 150ms ease-in-out;
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 @keyframes underlineLeft {
@@ -1266,7 +1263,7 @@ a.project-link.project-image:hover {
     outline: none;
     border: none;
     padding: 15px;
-    transition: 1000ms ease-in-out;
+    transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #demoButton::after {
@@ -1279,19 +1276,19 @@ a.project-link.project-image:hover {
     background: var(--main-blue);
     transform: scale(0,1);
     transform-origin: 0% 100%;
-    transition: 1000ms ease-in-out;
+   transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #demoButton:hover::after {
     transform: scale(1, 1);
-    transition: 1000ms ease-in-out;
+    transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #demoButton:hover {
     cursor: pointer;
     background: #000;
     border: none;
-    transition: 1000ms ease-in-out;
+    transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #demoButton:active {
@@ -1323,38 +1320,38 @@ a.project-link.project-image:hover {
     transform: rotate(-90deg);
     backdrop-filter: blur(2px);
     animation: fadeIn 300ms ease-in-out;
-    transition: 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
   
 #topButton:hover {
     background-color: rgb(0 120 75 / 80%);
     border-color: var(--main-green);
     color: #fff;
-    transition: 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #topButton.redMode {
     background: rgb(88 0 8 / 80%);
     color: var(--soft-white);
-    transition: 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
   
 #topButton.redMode:hover {
     color: #fff;
     background: rgb(88 0 8 / 80%);
-        transition: 300ms ease-in-out;
+        transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #topButton.blueMode {
     background: rgb(0 22 76 / 80%);
     color: var(--soft-white);
-    transition: 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
   
 #topButton.blueMode:hover {
     color: #fff;
     background-color: rgb(0 22 76 / 80%);
-    transition: 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #topButton:active {
@@ -1362,7 +1359,7 @@ a.project-link.project-image:hover {
     
     box-shadow: inset 0px 0px 3px rgb(0 0 0/ 80%);
     color: var(--main-blue);
-    transition: 150ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
 /* Fade In Animation */
@@ -1371,12 +1368,12 @@ a.project-link.project-image:hover {
 
     0% {
         opacity: 0;
-        transition: 300ms ease-in-out;
+       transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     100% {
         opacity: 1;
-        transition: 300ms ease-in-out;
+        transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
 }
@@ -1398,7 +1395,7 @@ a.project-link.project-image:hover {
 
     #Projects .box h4 {
         font-size: 18px;
-        transition: 150ms ease-in-out;
+       transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #Projects a {
