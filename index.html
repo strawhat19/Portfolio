@@ -15,29 +15,33 @@
 <!-- This is the Website Header -->
 
 <!-- This is the Navigation -->
-    <nav class="nav-menu" id="navigation">
-        <li class="nav-link Home"><a href="/" title="Home"><i class="fas fa-home"></i> RAKIB // AHMED</a></li>
-        <div class="mobile-menu-option" id="mobile-menu-option">
-            <div id="menuToggle">
-            <a id="openMenuToggler" class="openMenuToggler" onclick="openMobileMenu()">
-                <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
-                <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
-                <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
-            </a></div>
-        <ul class="desktop-menu-option" id="desktopMenu">
-            <li class="nav-link About"><a href="#About">About <i class="fas fa-user-edit"></i></a></li>
-            <li class="nav-link Projects"><a href="#Projects">Projects <i class="fas fa-project-diagram"></i></a></li>
-            <li class="nav-link Contact"><a href="#Contact">Contact <i class="fas fa-paper-plane"></i></a></li>
-                <div class="social-links" id="socialLinks">
-                    <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+    <div class="navigation">
+        <nav class="nav-menu" id="navigation">
+            <li class="nav-link Home"><a href="/" title="Home"><i class="fas fa-home"></i> RAKIB // AHMED</a></li>
+            <div class="mobile-menu-option" id="mobile-menu-option">
+                <div id="menuToggle" onclick="openMobileMenu()">
+                    <a id="openMenuToggler" class="openMenuToggler">
+                        <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
+                        <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
+                        <span id="menuTogglerSpan" class="menuTogglerSpan"></span>
+                    </a>
                 </div>
-        </ul>
-        </div>
-    </nav>
+                <ul class="desktop-menu-option" id="desktopMenu">
+                    <li class="nav-link About"><a href="#About">About <i class="fas fa-user-edit"></i></a></li>
+                    <li class="nav-link Projects"><a href="#Projects">Projects <i class="fas        fa-project-diagram"></i></a></li>
+                    <li class="nav-link Contact"><a href="#Contact">Contact <i class="fas fa-paper-plane"></i></a></li>
+                        <div class="social-links" id="socialLinks">
+                            <a href="https://github.com/strawhat19" class="nav-link githubLink" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/rakib-ahmed19/" class="nav-link linkedInLink" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:rahmed@piratechs.com" class="nav-link emailLink" title="Email"  target="_blank"><i class="fas fa-envelope"></i></a>
+                            <a href="https://piratechs.com/" class="nav-link piratechsLink" title="Piratechs" target="_blank"><i class="fas fa-share-alt-square"></i></a>
+                            <a href="https://www.instagram.com/piratechsatl/" class="nav-link instagramLink" title="Design Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            
+                        </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <header class="website-header Site-Header" id="Site-Header">
 
@@ -79,12 +83,21 @@
 
             <br>
 
+            <div class="content grid-row featured-project-row">
+                <div class="box featured-project">
+                    <h4>SANCTUARY</h4>
+                    <hr>
+                    <a class="project-link project-image sanctuary-image-link" href="https://youtu.be/mAiFUNvG0Pk" target="_blank" title="Sanctuary Demo" alt="Santuary Art">Sanctuary</a>
+                    <a class="project-link project-button" href="https://youtu.be/mAiFUNvG0Pk" target="_blank" title="Open Project In New Window">VIEW</a>
+                </div>
+            </div>
+
             <div class="content grid-row">
 
                 <div class="box light-logo-box">
                     <h4>PIRATECHS</h4>
                     <hr>
-                    <a class="project-link project-image" href="https://piratechs.com/" target="_blank" title="Open Project In New Window">
+                    <a class="project-link project-image" href="https://piratechs.com/" target="_blank" title="Piratechs">
                     <img class="light-picture piratechs-logo" src="https://piratechs.com/wp-content/uploads/2020/01/Piratech-Official-Glitch-Long.gif" alt="Piratechs Logo"></a>
                     <a class="project-link project-button" href="https://piratechs.com/" target="_blank" title="Open Project In New Window">VIEW</a>
                 </div>
@@ -92,7 +105,7 @@
                 <div class="box">
                     <h4>PROJECT ESCAPE</h4>
                     <hr>
-                    <a class="project-link project-image" href="https://www.projectescapeatl.com/" target="_blank" title="Open Project In New Window">
+                    <a class="project-link project-image" href="https://www.projectescapeatl.com/" target="_blank" title="Project Escape">
                     <img src="http://www.projectescapeatl.com/wp-content/uploads/2019/12/Transparent-Logo-Spin.gif" alt="Project Escape Logo"></a>
                     <a class="project-link project-button" href="https://www.projectescapeatl.com/" target="_blank" title="Open Project In New Window">VIEW</a>
                 </div>
@@ -100,23 +113,20 @@
                 <div class="box light-logo-box">
                     <h4>TOTAL ASPHALT</h4>
                     <hr>
-                    <a class="project-link project-image" href="https://totalasphalt.precision-dev.com/" target="_blank" title="Open Project In New Window">
-                    <img class="light-picture total-asphalt-logo" src="https://totalasphalt.precision-dev.com/wp-content/uploads/2019/12/TA-Stroke-5.gif" alt="Total Asphalt Logo"></a>
+                    <a class="project-link project-image" href="https://totalasphalt.precision-dev.com/" target="_blank" title="Total Asphalt">
+                    <img class="light-picture total-asphalt-logo" src="./assets/Images/TA-Logo.gif" alt="Total Asphalt Logo"></a>
                     <a class="project-link project-button" href="https://totalasphalt.precision-dev.com/" target="_blank" title="Open Project In New Window">VIEW</a>
                 </div>
 
                 <div class="box">
                     <h4>DYER & POSTA</h4>
                     <hr>
-                    <a class="project-link project-image" href="https://dyerandposta.com/" target="_blank" title="Open Project In New Window">
+                    <a class="project-link project-image" href="https://dyerandposta.com/" target="_blank" title="Dyer & Posta Salon">
                     <img class="dapLogo" src="./assets/Images/Asset 2Icon-VLight-Greenofficial.png" alt="Dyer and Posta Logo"></a>
                     <a class="project-link project-button" href="https://dyerandposta.com/" target="_blank" title="Open Project In New Window">VIEW</a>
                 </div>
         
             </div>
-
-
-
 
 </section>
 

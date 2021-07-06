@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
 /* Main Style Controller */
 
 ::selection {
@@ -44,8 +46,7 @@ nav {
     justify-content: space-between;
     top: 0;
     width: 100%;
-    border-top: 1px solid var(--grays);
-    border-bottom: 1px solid var(--grays);
+    border-bottom: 1px solid var(--soft-white);
     z-index: 1;
     background: rgb(0 0 0 / 82%);
     backdrop-filter: blur(2px);
@@ -57,7 +58,7 @@ nav li {
 
 .Home a:hover {
     background: var(--soft-white);
-    padding: 14px 15px;
+    padding: 15px;
     font-size: 15px;
     font-weight: 600;
     color: #181a1b;
@@ -192,6 +193,10 @@ nav ul {
 ) scale(0.2, 0.2);
 }
 
+.About, .Projects, .Contact {
+    border-bottom: 1px solid var(--grays);
+}
+
     .openMenu {
         color: var(--soft-white);
         border-right: 1px solid var(--grays);
@@ -202,19 +207,49 @@ nav ul {
 
     #socialLinks {
         display: flex;
+        column-gap: 15px;
+        padding-top: 15px;
     }
 
     .social-links a {
         color: var(--soft-white);
         font-size: 20px;
         transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-        padding: 7px 9px;
+        padding: 7px 11px;
         border-radius: 100%;
     }
 
+    .social-links .linkedInLink:hover {
+        color: var(--soft-white);
+        background: #0a66c2;
+        font-size: 20px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .social-links .piratechsLink:hover {
+        color: var(--soft-white);
+        background: #2b4261;
+        font-size: 20px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
     .social-links .githubLink:hover {
-        color: #000;
+        color: #0d1117;
         background: var(--soft-white);
+        font-size: 20px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .social-links .instagramLink:hover {
+        color: var(--soft-white);
+        background: #c13584;
+        font-size: 20px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .social-links .emailLink:hover {
+        color: var(--soft-white);
+        background: var(--main-red);
         font-size: 20px;
         transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
@@ -240,7 +275,7 @@ nav ul {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: -400%;
+        top: -450%;
         left: 0;
         right: 0;
         transition: 500ms ease-in-out;
@@ -272,8 +307,7 @@ nav ul {
         right: 0;
         z-index: -5;
         transition: 500ms ease-in-out;
-        border-top: 1px solid va(--grays);
-        border-bottom: 1px solid va(--grays);
+        border-bottom: 1px solid var(--grays);
         background: rgb(0 0 0 / 82%);
     }
 
@@ -305,9 +339,9 @@ nav ul {
     background: linear-gradient(rgb(0 204 128 / 85%),rgb(0 120 75 / 0%)), url(./Images/Ocean-Stars.jpg);
     background-position: 50% 0%;
     background-attachment: fixed;
-    position: sticky;
     top: 0;
     letter-spacing: 2px;
+    border-bottom: 1px solid var(--soft-white);
 }
 
 .About a:hover {
@@ -348,6 +382,10 @@ nav ul {
 #Projects a:hover {
     color: #fff;
     transition: 150ms ease-in-out;
+}
+
+a.project-link.project-button {
+    display: none;
 }
 
 .project-link a {
@@ -563,6 +601,43 @@ hr {
     transition: 150ms ease-in-out; 
 }
 
+#Projects .featured-project {
+    width: 100%;
+    place-items: center;
+}
+
+#Projects .featured-project hr {
+    max-width: 300px;
+    width: 85%;
+    margin: 3px 0px 20px !important;
+}
+
+#Projects .sanctuary-image-link {
+    font-family: 'caveat';
+    font-size: 110px;
+    display: flex;
+    place-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 540px;
+    max-height: 540px;
+    background-position: 50% 50% !important;
+    object-fit: contain;
+    padding: 0;
+    justify-content: center;
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+    color: #fff;
+    background: url(./Images/Sanctuary\ Art.png);
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#Projects .sanctuary-image-link:hover {
+text-shadow: 0 0 4px #000;
+transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
 #Projects .box {
     display: flex;
     flex-wrap: wrap;
@@ -642,6 +717,10 @@ a.project-link.project-image:hover {
         float: left;
     }
 
+    .bio-content .header {
+        margin-bottom: -20px;
+    }
+
     #About .content p {
         padding: 0 0 35px 70px;
         border-left: 5px inset var(--main-green);
@@ -664,8 +743,26 @@ a.project-link.project-image:hover {
         border-bottom: 4px inset #001f14;
         width: 40%;
         position: absolute;
-        left: 0;
-        top: 62%;
+        left: 0%;
+        top: 13.6%;
+    }
+
+    #Projects .box hr {
+        margin: 3px 0px 12px;
+    }
+
+    #Projects .sanctuary-image-link {
+        font-size: 110px;
+        width: 960px;
+        max-width: 100%;
+        height: 540px;
+        max-height: 540px;
+        background-position: 50% 50% !important;
+        object-fit: contain;
+        padding: 0;
+        justify-content: center;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
     }
 
 }
@@ -734,7 +831,10 @@ a.project-link.project-image:hover {
 
     #Projects .grid-row {
         width: 100%;
+        text-align: center;
+        margin: 0 auto;
         display: flex;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 0px;
@@ -757,6 +857,13 @@ a.project-link.project-image:hover {
         width: 100%;
         margin: -10px auto 20px;
         max-width: 300px;
+        transition: 150ms ease-in-out;
+    }
+
+    #Projects .featured-project hr {
+        width: 100%;
+        margin: -10px auto 20px;
+        max-width: 760px;
         transition: 150ms ease-in-out;
     }
 
@@ -799,6 +906,16 @@ a.project-link.project-image:hover {
 
     #About .content p {
         width: 69%;
+    }
+
+}
+
+/* Featured Project Sanctuary */
+
+@media screen and (max-width: 1360px) {
+
+    #Projects .sanctuary-image-link {
+    background-size: cover !important;
     }
 
 }
@@ -1096,6 +1213,27 @@ footer {
         font-size: 12px;
     }
 
+    #Projects .sanctuary-image-link {
+        font-family: 'caveat';
+        font-size: 65px;
+        text-shadow: 0 0 4px black;
+        display: flex;
+        place-items: center;
+        width: 100%;
+        max-width: 85%;
+        margin: 0 auto;
+        height: 100%;
+        max-height: 540px;
+        background-position: 50% 25% !important;
+        object-fit: contain;
+        padding: 0;
+        justify-content: center;
+        background-repeat: no-repeat !important;
+        background-size: 100% !important;
+        color: var(--soft-white);
+        background: url(./Images/Sanctuary\ Art.png);
+    }
+
    footer {
     padding: 100px 30px;
    }
@@ -1120,20 +1258,32 @@ footer {
 
 }
 
+@media screen and (max-width: 667px) {
+
+    .opening-header {
+        font-size: 36px;
+    }
+
+}
+
 
 /* Smaller Screens */
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:520px) {
 
-    h3 {
-        padding: 0px;
-        font-size: 25px;
+    .opening-header {
+        font-size: 22px;
     }
 
-    hr {
-        border-width: 1px;
+    h2, h3 {
+        font-size: 20px;
     }
 
+    #Projects .featured-project hr {
+        width: 85%;
+        max-width: 85%;
+        margin: -10px 0px 20px !important;
+    }
 
 }
 
