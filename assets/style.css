@@ -15,7 +15,6 @@ body {
     background: #000;
     font-family: 'montserrat';
     color: var(--soft-white);
-    width: 100vw;
     overflow-x: hidden;
     margin: 0 auto;
     box-sizing: border-box;
@@ -25,6 +24,11 @@ body {
 /* Color of Highlight by User Selection */
 ::selection {
     background: #181a1b;
+}
+
+::marker {
+    color: var(--main-blue);
+    font-size: 9px;
 }
 
     /* Variables */
@@ -154,12 +158,12 @@ nav ul {
     opacity: 0;
     width: 100%;
     flex-wrap: wrap;
-    list-style-type: none;
+    list-style-type: disclosure-closed;
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .interestsAccordion li.interestData {
-    width: 33.3%;
+    width: 25%;
     font-size: 13px;
     line-height: 1.8;
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -512,7 +516,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
         left: 0;
         right: 0;
         z-index: -5;
-            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         border-bottom: 1px solid var(--grays);
         background: rgb(0 0 0 / 82%);
     }
@@ -547,6 +551,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
     top: 0;
     letter-spacing: 2px;
     border-bottom: 1px solid var(--soft-white);
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .About a:hover {
@@ -600,7 +605,7 @@ a.project-link.project-button {
 
 .Projects a:hover {
     color: #fff;
-    background: #ab0f1e;
+    background: var(--main-red);
     padding: 15px;
     transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -788,7 +793,9 @@ nav .Projects.active a:hover {
 
 #Projects .featured-project {
     width: 100%;
+    justify-content: center;
     place-items: center;
+    margin: 0 auto;
 }
 
 #Projects .featured-project hr {
@@ -1035,7 +1042,7 @@ a.project-link.project-image:hover {
 
     #Projects .box h4 {
       margin: 25px 0px;
-      transition: 150ms ease-in-out;
+      transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #Projects .box hr {
@@ -1080,8 +1087,8 @@ a.project-link.project-image:hover {
      }
  
      .interestsAccordion li.interestData {
-        width: 50%;
-        text-align: center;
+        width: 25%;
+        text-align: left;
         font-size: 13px;
         line-height: 1.8;
         transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -1263,7 +1270,7 @@ a.project-link.project-image:hover {
     outline: none;
     border: none;
     padding: 15px;
-    transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 1s ease-in-out;
 }
 
 #demoButton::after {
@@ -1276,19 +1283,19 @@ a.project-link.project-image:hover {
     background: var(--main-blue);
     transform: scale(0,1);
     transform-origin: 0% 100%;
-   transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 1s ease-in-out;
 }
 
 #demoButton:hover::after {
     transform: scale(1, 1);
-    transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 1s ease-in-out;
 }
 
 #demoButton:hover {
     cursor: pointer;
     background: #000;
     border: none;
-    transition: 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 1s ease-in-out;
 }
 
 #demoButton:active {
@@ -1308,18 +1315,37 @@ a.project-link.project-image:hover {
     right: 30px;
     z-index: 99;
     outline: none !important;
-    background: rgb(0 120 75 / 80%);
+    background: rgb(0 204 128 / 85%);
     border: none !important;
     color: var(--soft-white);
     cursor: pointer;
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 0px;
     font-size: 18px;
-    font-size: 'montserrat';
-    font-weight: 800;
+    font-family: 'montserrat' !important;
+    font-weight: 500;
     transform: rotate(-90deg);
     backdrop-filter: blur(2px);
     animation: fadeIn 300ms ease-in-out;
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#topButton::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 120 75 / 80%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform-origin: top;
+    transform: scale(1,0);
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#topButton:hover::before {
+    transform: scale(1,1);
     transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
   
@@ -1331,7 +1357,7 @@ a.project-link.project-image:hover {
 }
 
 #topButton.redMode {
-    background: rgb(88 0 8 / 80%);
+    background: rgb(255 23 45 / 85%);
     color: var(--soft-white);
     transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -1339,11 +1365,16 @@ a.project-link.project-image:hover {
 #topButton.redMode:hover {
     color: #fff;
     background: rgb(88 0 8 / 80%);
-        transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#topButton.redMode:hover::before {
+    background: rgb(171 15 30 / 85%);
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #topButton.blueMode {
-    background: rgb(0 22 76 / 80%);
+    background: rgb(0 194 255 / 85%);
     color: var(--soft-white);
     transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -1351,6 +1382,11 @@ a.project-link.project-image:hover {
 #topButton.blueMode:hover {
     color: #fff;
     background-color: rgb(0 22 76 / 80%);
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#topButton.blueMode:hover::before {
+    background: rgb(0 22 76 / 85%);
     transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -1484,6 +1520,25 @@ a.project-link.project-image:hover {
         width: 85%;
         max-width: 85%;
         margin: -10px 0px 20px !important;
+    }
+
+    .interestsAccordion li.interestData {
+        width: 33%;
+    }
+
+    .Contact h4 {
+        text-align: left !important;
+        font-size: 11px;
+    }
+
+}
+
+/* iPhone SE and Smaller*/
+@media screen and (max-width: 325px) {
+
+    .interestsAccordion li.interestData {
+        width: 50%;
+        font-size: 11px;
     }
 
 }
@@ -1651,23 +1706,85 @@ div, textarea, input {
     color: #4f6fad;
     margin: 0 0 0 0.5em;
   }
-  
+
+  /* iPhone SE */
   @media only screen and (max-width: 480px) {
 
     body {
-        width: 108vw;
+        width: 100vw;
+    }
+
+    nav {
+        width: 100%;
     }
 
     section {
-        padding: 40px 20px 40px 40px !important;
+        padding: 40px 40px 40px 40px !important;
+    }
+
+    .opening-header {
+        font-size: 16px;
+        text-align: center;
     }
     
     h2 {
-        font-size: 16px;
+        font-size: 12px;
+    }
+
+    #About .content p {
+        margin-top: -65px;
+        width: 100%;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    #Projects .box h4 {
+        font-size: 11px;
     }
 
     #Projects hr {
         width: 100%;
+    }
+
+    #Projects .sanctuary-image-link {
+        font-size: 50px;
+    }
+
+    #Projects .grid-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid-row .box {
+        width: 100%;
+    }
+
+    .container {
+        max-width: 320px;
+        width: 100%;
+        min-width: 100px;
+        margin: 0px 0px;
+    }
+
+    .row.body {
+        padding: 0 15px;
+    }
+
+    .row {
+        margin: 0 0 3em 0;
+    }
+
+    .Contact .social-with-text {
+        justify-content: flex-start;
+    }
+
+    #interestsAccordion {
+        padding: 0px 0px;
+        margin: 15px 0px 0px 15px;
     }
 
     .pull-right {
