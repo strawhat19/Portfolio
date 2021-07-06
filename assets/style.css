@@ -15,6 +15,7 @@
     --grays: rgb(48, 52, 54);
 }
 
+
 html {
 scroll-behavior: smooth;
 }
@@ -26,44 +27,48 @@ body {
     width: 100vw;
     overflow-x: hidden;
     margin: 0 auto;
-   box-sizing: border-box;
+    box-sizing: border-box;
    width: 100vw;
 }
 
-/* Header Styling */
-
-.opening-header {
-    text-align: center;
-    font-size: 75px;
-    padding: 55px;
-    margin: 0;
-    background: linear-gradient(rgb(0 204 128 / 85%),rgb(0 120 75 / 0%)), url(./Images/Ocean-Stars.jpg);
-    background-position: 50% 0%;
-    background-attachment: fixed;
-    position: sticky;
-    top: 0;
-    letter-spacing: 2px;
-}
+/* Nav Styling */
 
 nav {
     background: var(--black-glass);
-    position: -webkit-sticky;
-    position: sticky;
- top: 0;
- border-top: 1px solid var(--grays);
- border-bottom: 1px solid var(--grays);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    border-top: 1px solid var(--grays);
+    border-bottom: 1px solid var(--grays);
+    z-index: 1;
+    background: rgb(0 0 0 / 82%);
+    backdrop-filter: blur(2px);
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.Home a:hover {
+    background: var(--soft-white);
+    padding: 14px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #181a1b;
+    transition: 150ms ease-in-out;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    place-items: center;
  justify-content: center;
  padding: 15px;
- background: var(--black-glass);
- backdrop-filter: blur(2px);
  list-style-type: none;
  margin: 0;
- position: -webkit-sticky;
 }
 
 .nav-link a {
@@ -78,6 +83,224 @@ nav ul {
     border-right: 1px solid var(--grays);
     border-left: 1px solid var(--grays);
     transition: 150ms ease-in-out;
+}
+
+/* Mobile Menu */
+
+@media screen and (min-width: 992px) {
+
+    .mobile-menu {
+        display: none !important;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    /* Mobile Menu */
+
+    nav {
+        padding: 0px 0px;
+        height: 48px;
+    }
+
+    .mobile-menu-option {
+        padding-right: 15px;
+    }
+
+    .mobile-menu {
+        font-size: 15px;
+        padding: 0px 15px;
+        transition: 300ms ease-in-out;
+    }
+
+    .mobile-menu:hover {
+        padding: 15px;
+        cursor: pointer;
+        background: var(--soft-white);
+        color: #181a1b;
+        transition: 300ms ease-in-out;
+    }
+
+    #menuToggle {
+        display: flex;
+        border-right: 1px solid var(--grays);
+        border-left: 1px solid var(--grays);
+        padding: 0px 15px 0px 15px;
+        margin: 0px;
+        place-items: center;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menuToggle:hover {
+        cursor: pointer;
+        background: var(--soft-white);
+        display: flex;
+        border-right: 1px solid var(--grays);
+        border-left: 1px solid var(--grays);
+        padding: 14px 15px;
+        margin: 0px;
+        place-items: center;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menuToggle:hover span {
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        background: #000;
+    }
+
+#menuToggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--soft-white);
+    border-radius: 0px;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#openMenuToggler.clicked span {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0px, 0px);
+}
+
+#openMenuToggler.clicked span:nth-last-child(2) {
+    transform: rotate(45deg) translate(-3px, -4px);
+}
+
+#openMenuToggler.clicked span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(
+0deg
+) scale(0.2, 0.2);
+}
+
+    .openMenu {
+        color: var(--soft-white);
+        border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+        border-radius: 0;
+        transition: 300ms ease-in-out;
+    }
+
+    #socialLinks {
+        display: flex;
+    }
+
+    .social-links a {
+        color: var(--soft-white);
+        font-size: 20px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        padding: 7px 9px;
+        border-radius: 100%;
+    }
+
+    .social-links .githubLink:hover {
+        color: #000;
+        background: var(--soft-white);
+        font-size: 20px;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .closeMenu {
+        color: var(--soft-white);
+        border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+        border-radius: 0;
+        transition: 300ms ease-in-out;
+    }
+
+    .closeMenu:hover {
+        border-right: 1px solid var(--grays);
+    border-left: 1px solid var(--grays);
+        border-radius: 0;
+        transition: 300ms ease-in-out;
+    }
+
+    .desktop-menu-option {
+        z-index: -5;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -400%;
+        left: 0;
+        right: 0;
+        transition: 500ms ease-in-out;
+    }
+
+    .desktop-menu-option .nav-link {
+        z-index: -5;
+        margin: 1px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .desktop-menu-option .nav-link a {
+        z-index: -5;
+        border-right: none;
+        border-left: none;
+        padding: 15px;
+        display: block;
+        margin: 0;
+    }
+
+    .desktop-menu-option.open-mobile-menu {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: -5;
+        transition: 500ms ease-in-out;
+        border-top: 1px solid va(--grays);
+        border-bottom: 1px solid va(--grays);
+        background: rgb(0 0 0 / 82%);
+    }
+
+    .desktop-menu-option.open-mobile-menu .nav-link {
+        margin: 1px auto;
+        width: 100%;
+        text-align: center;
+        z-index: 0;
+    }
+
+    .desktop-menu-option.open-mobile-menu .nav-link a {
+        border-right: none;
+        border-left: none;
+        padding: 15px;
+        display: block;
+        margin: 0;
+        z-index: -5;
+    }
+
+}
+
+/* Header Styling */
+
+.opening-header {
+    text-align: center;
+    font-size: 75px;
+    padding: 85px 55px 30px;
+    margin: 0;
+    background: linear-gradient(rgb(0 204 128 / 85%),rgb(0 120 75 / 0%)), url(./Images/Ocean-Stars.jpg);
+    background-position: 50% 0%;
+    background-attachment: fixed;
+    position: sticky;
+    top: 0;
+    letter-spacing: 2px;
 }
 
 .About a:hover {
@@ -231,7 +454,7 @@ section {
     padding: 100px 200px;
 }
 
-h3 {
+h2, h3 {
     margin: 0;
     padding: 15px;
     font-size: 28px;
@@ -249,6 +472,7 @@ h4 {
 hr {
     width: 395px;
     border-width: 3px;
+    margin: 0;
 }
 
 
@@ -289,7 +513,9 @@ hr {
 }
 
 .header {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #Projects .header {
@@ -403,7 +629,11 @@ a.project-link.project-image:hover {
 
 /* Laptops */
 
-@media screen and (min-width: 1501px) {
+@media screen and (min-width: 1500px) {
+
+    .header {
+        float: left;
+    }
 
     #About .content p {
         padding: 0 0 35px 70px;
@@ -411,6 +641,24 @@ a.project-link.project-image:hover {
         border-bottom: 5px inset var(--main-green);
         width: 69%;
         transition: 150ms ease-in-out;
+    }
+
+    .opening-header {
+        padding: 85px 55px 30px;
+        text-align: right;
+    }
+
+    .opening-header::before {
+        content: '';
+        height: 0px;
+        background: var(--main-green);
+        border-right: 4px inset var(--main-green);
+        border-top: 4px inset var(--main-green);
+        border-bottom: 4px inset #001f14;
+        width: 40%;
+        position: absolute;
+        left: 0;
+        top: 62%;
     }
 
 }
@@ -422,6 +670,17 @@ a.project-link.project-image:hover {
         max-width: 700px;
         margin: 0 auto;
         transition: 150ms ease-in-out;
+    }
+
+    .header {
+       float: none;
+    }
+
+    .bio-content {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        flex-direction: column;
     }
 
     hr {
@@ -445,10 +704,17 @@ a.project-link.project-image:hover {
 
     .content p {
     padding: 35px 0px;
-    order: 2;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     transition: 150ms ease-in-out;
+    }
+
+    #About .content p {
+        padding: 35px 0px;
+        text-align: left;
+        /* text-transform: uppercase; */
+        transition: 150ms ease-in-out;
+        display: inline-block;
     }
 
     #About .content img {
@@ -482,6 +748,7 @@ a.project-link.project-image:hover {
 
     #Projects .box hr {
         width: 100%;
+        margin: -10px auto 20px;
         max-width: 300px;
         transition: 150ms ease-in-out;
     }
@@ -507,6 +774,43 @@ a.project-link.project-image:hover {
 
     a.project-image {
         min-width: 200px;
+    }
+
+}
+
+/* XL - Large Breakpoint Min */
+
+@media screen and (min-width: 1335px) {
+
+    #About .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        place-items: center;
+        column-gap: 65px;
+    }
+
+    #About .content p {
+        width: 69%;
+    }
+
+}
+
+/* XL - Large Breakpoint Max */
+
+@media screen and (max-width: 1335px) {
+
+    #About .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 65px;
+    }
+
+    #About .content p {
+        margin-top: -40px;
+        width: 100%;
+        text-align: center;
     }
 
 }
@@ -546,13 +850,6 @@ a.project-link.project-image:hover {
     display: block;
     /* animation: borderSpin 5000ms ease-in-out infinite alternate; */
     transition: 5000ms ease-in-out;
-}
-
-/* XL - Large Breakpoint */
-
-@media screen and (max-width:1200px) {
-
-
 }
 
 #Contact {
@@ -778,6 +1075,10 @@ footer {
 /* Larger iPads and Tablets */
 
 @media screen and (max-width: 992px) {
+
+    .opening-header {
+        font-size: 55px;
+    }
 
     #Projects .box h4 {
         font-size: 18px;

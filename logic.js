@@ -1,3 +1,22 @@
+// Open and Close Mobile Menu
+
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+function openMobileMenu() {
+	var mobileMenuOpen = document.getElementById("desktopMenu");
+	var menuToggler = document.getElementById("openMenuToggler");
+	mobileMenuOpen.classList.toggle("open-mobile-menu");
+	menuToggler.classList.toggle("clicked");
+}
+
+// function closeMobileMenu() {
+// 	var mobileMenuOpen = document.getElementById("desktopMenu");
+// 	var menuToggle = document.getElementById("menuToggle");
+// 	mobileMenuOpen.classList.toggle("open-mobile-menu");
+// 	menuToggle.innerHTML = '<a class="openMenuToggler" onclick="openMobileMenu()"><span></span><span></span><span></span></a>'
+// }
+
 console.log('%c Hey there, welcome to my website!', 'font-family: montserrat; font-size: 15px;');
 console.log('%c This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation.', 'font-family: montserrat; font-size: 15px;');
 
