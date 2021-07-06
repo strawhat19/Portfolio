@@ -10,16 +10,25 @@ function openMobileMenu() {
 	menuToggler.classList.toggle("clicked");
 }
 
+// Open and Close Interests Menu
+
+const openInterests = document.getElementById("interestsLink");
+const interestsAccordion = document.getElementById("interestsAccordion");
+
+function openInterestsList() {
+	interestsAccordion.classList.toggle("open-interests-list");
+	openInterests.classList.toggle("clicked");
+}
+
 console.log('%c Hey there, welcome to my website.', 'font-family: montserrat; font-size: 15px;');
 console.log('%c This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation.', 'font-family: montserrat; font-size: 15px;');
-
 
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li');
 var currentSection = pageYOffset;
 
-
 window.addEventListener('scroll', ()=> {
+
     let current = '';
 
     sections.forEach( section => {
@@ -42,11 +51,9 @@ if(li.classList.contains(current)){
     })
 })
 
-
 console.log('%c There is also a script to take the user back to the top of the page when they click the #topButton element.', 'font-family: montserrat;  font-size: 15px;');
 console.log('%c Feel free to scroll and see the changes.', 'font-family: montserrat; font-size: 15px;');
 console.log('%c Thank you for visiting', 'font-family: montserrat;  font-size: 15px;');
-
 
 // Get the button:
 topButton = document.getElementById("topButton");
@@ -63,7 +70,6 @@ window.addEventListener('scroll', function () {
  topButton.classList.toggle('redMode', window.scrollY > projectsRectTop - 500 && window.scrollY < contactRectTop);
  topButton.classList.toggle('blueMode', window.scrollY > contactRectTop - 500);
 })
-
 
 // When the user scrolls down 0px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -83,18 +89,21 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-
-
+// When user clicks Border Button, prompt for username
 function getUsername() {
 
 var person = prompt("Please enter your name");
 
+	// When user replace Footer Text with username entered from prompt function
   document.getElementById("demoButton").innerHTML = "CLICK TO CHANGE NAME AGAIN";
   document.getElementById("footer-text").innerHTML = "THANKS FOR VISITING " + '<a id="insertName" onclick="getUsername()"></a>';
   document.getElementById("insertName").innerHTML = person + "!";
 
 }
 
+// Beginning Javascript Playground Below // Testing Code
+
+console.log('%c Below I am trying out Intersection Observer', 'font-family: montserrat;  font-size: 15px;');
 
 // Trying Intersection Observer
 const options = {
@@ -105,7 +114,7 @@ const options = {
 
 const observer = new IntersectionObserver(function(entries,observer) {
   entries.forEach(entry => {
-   console.log(entry.target);
+   console.log(entry);
   })
 }, options);
 
