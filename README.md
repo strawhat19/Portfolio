@@ -5,7 +5,6 @@ A portfolio landing page to display my latest projects and basic info.
 Completely mobile responsive custom coded html and css website with a hint of javascript going on. Utilizing the power of CSS Flexbox to style this application.
 
 ## Application Link
-https://strawhat19.github.io/Portfolio/
 
 ## Application Design
 
