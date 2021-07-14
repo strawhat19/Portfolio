@@ -1,4 +1,4 @@
-# Professiona Portfolio
+# Professional Portfolio
 A portfolio landing page to display my latest projects and basic info.
 
 ## Application Function
