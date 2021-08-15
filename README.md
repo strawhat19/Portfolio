@@ -10,7 +10,7 @@ https://strawhat19.github.io/Portfolio/
 ## Application Design
 Rakib // Ahmed - Desktop             |  Rakib // Ahmed - Mobile
 :-------------------------:|:-------------------------:
-![Portfolio on Desktop](/assets/images/design/Portfolio-screenshotlarge.jpg)  |  ![Portfolio on Mobile](/assets/images/design/IphoneTransparentVersion.png)
+![Portfolio on Desktop](./assets/images/design/Portfolio-screenshotlarge.jpg)  |  ![Portfolio on Mobile](./assets/images/design/IphoneTransparentVersion.png)
 
 
 
