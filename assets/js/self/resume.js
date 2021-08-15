@@ -1,8 +1,15 @@
 // Resume JS File for New Code
 console.log(`JS for Resume Section!`);
 
+// Fading In Main Body
+// More Animation Variables Below
+const body = $(`body`);
+body.attr(`style`,`display: none`);
+body.fadeIn(1000);
+
 // Declaring Variables
-var copyright = $(`.copyright-info`);
+var copyrightYear = $(`.copyright-year`);
+copyrightYear.html(moment().format(`YYYY`));
 
 // Initializing First Map Screen
 function initmap(){

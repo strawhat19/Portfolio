@@ -31,17 +31,6 @@ body {
     font-size: 9px;
 }
 
-/* Variables */
-:root {
-    --main-blue: #00c2ff;
-    --main-red: #ff172d;
-    --main-green: #00cc80;
-    --dark-blue: #00164c;
-    --soft-white: rgb(232, 230, 227);
-    --black-glass: rgb(0 0 0 / 50%);
-    --grays: rgb(48, 52, 54);
-}
-
 /* Main Content Styling */
 main {
     margin: 0 auto;
@@ -752,6 +741,7 @@ nav .Projects.active a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 #Projects .header {
