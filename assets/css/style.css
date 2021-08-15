@@ -31,16 +31,16 @@ body {
     font-size: 9px;
 }
 
-    /* Variables */
-    :root {
-        --main-blue: #00c2ff;
-        --main-red: #ff172d;
-        --main-green: #00cc80;
-        --dark-blue: #00164c;
-        --soft-white: rgb(232, 230, 227);
-        --black-glass: rgb(0 0 0 / 50%);
-        --grays: rgb(48, 52, 54);
-    }
+/* Variables */
+:root {
+    --main-blue: #00c2ff;
+    --main-red: #ff172d;
+    --main-green: #00cc80;
+    --dark-blue: #00164c;
+    --soft-white: rgb(232, 230, 227);
+    --black-glass: rgb(0 0 0 / 50%);
+    --grays: rgb(48, 52, 54);
+}
 
 /* Main Content Styling */
 main {
@@ -90,7 +90,6 @@ footer {
 
 }
 
-/* Nav Styling */
 nav {
     background: var(--black-glass);
     position: fixed;
@@ -103,6 +102,7 @@ nav {
     z-index: 1;
     background: rgb(0 0 0 / 82%);
     backdrop-filter: blur(2px);
+  
 }
 
 nav li {

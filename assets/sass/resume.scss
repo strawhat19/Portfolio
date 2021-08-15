@@ -1,20 +1,25 @@
+// Resume SCSS
 
+// Declaring Variables
 $resume: #333;
+$red: #ff172d;
+$green: #00cc80;
+$blue: #00c2ff;
+$darkBlue: #00164c;
 
 .Resume {
-    width: 100%;
-    height: 200vh;
+    background: $darkBlue;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#map {
-    width: 30%;
-    height: 100%;
-}
-
-#couchAnimation {
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    color: #fff;
+    #map {
+        width: 100%;
+        height: 100px;
+    }
+    #couchAnimation {
+        width: 50%;
+        height: auto;
+    }
 }

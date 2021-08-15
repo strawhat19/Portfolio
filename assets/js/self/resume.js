@@ -1,9 +1,8 @@
 // Resume JS File for New Code
-console.log(`Resume!`);
+console.log(`JS for Resume Section!`);
 
 // Declaring Variables
 var copyright = $(`.copyright-info`);
-console.log(copyright);
 
 // Initializing First Map Screen
 function initmap(){

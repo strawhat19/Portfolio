@@ -22,8 +22,8 @@ function openInterestsList() {
 	interestsList.classList.toggle("openList");
 }
 
-console.log('%c Hey there, welcome to my website.', 'font-family: montserrat; font-size: 15px;');
-console.log('%c This is a script written to log the users scrolling and simultaneously detect what section the user is on, and then using that data to trigger animations in the navigation.', 'font-family: montserrat; font-size: 15px;');
+console.log('Hey there, welcome to my website.');
+// console.log('%c Hey there, welcome to my website.', 'font-family: montserrat; font-size: 15px;'); // Styled Log
 
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav ul li');
@@ -52,10 +52,6 @@ if(li.classList.contains(current)){
 }
     })
 })
-
-console.log('%c There is also a script to take the user back to the top of the page when they click the #topButton element.', 'font-family: montserrat;  font-size: 15px;');
-console.log('%c Feel free to scroll and see the changes.', 'font-family: montserrat; font-size: 15px;');
-console.log('%c Thank you for visiting', 'font-family: montserrat;  font-size: 15px;');
 
 // Get the button:
 topButton = document.getElementById("topButton");
@@ -102,10 +98,6 @@ var person = prompt("Please enter your name");
   document.getElementById("insertName").innerHTML = person + "!";
 
 }
-
-// Beginning Javascript Playground Below // Testing Code
-
-console.log('%c Below I am trying out Intersection Observer', 'font-family: montserrat;  font-size: 15px;');
 
 // Trying Intersection Observer
 const options = {

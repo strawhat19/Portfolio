@@ -1,6 +1,5 @@
 .Resume {
-  width: 100%;
-  height: 200vh;
+  background: #00164c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,15 +9,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
 }
 
-#map {
-  width: 30%;
-  height: 100%;
-}
-
-#couchAnimation {
+.Resume #map {
   width: 100%;
-  height: 100%;
+  height: 100px;
+}
+
+.Resume #couchAnimation {
+  width: 50%;
+  height: auto;
 }
 /*# sourceMappingURL=resume.css.map */
