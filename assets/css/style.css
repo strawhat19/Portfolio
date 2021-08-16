@@ -37,7 +37,7 @@ main {
 }
 
 section {
-    padding: 100px 200px;
+    padding: 100px 200px 150px;
 }
 
 h2, h3 {
@@ -88,7 +88,7 @@ nav {
     top: 0;
     width: 100%;
     border-bottom: 1px solid var(--soft-white);
-    z-index: 1;
+    z-index: 2;
     background: rgb(0 0 0 / 82%);
     backdrop-filter: blur(2px);
   

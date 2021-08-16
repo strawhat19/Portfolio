@@ -29,6 +29,86 @@
   position: relative;
 }
 
+.Resume ::-moz-selection {
+  background: var(--main-green);
+}
+
+.Resume ::selection {
+  background: var(--main-green);
+}
+
+.Resume .vectorGraphicText {
+  z-index: 1;
+}
+
+.Resume .vectorGraphicText text {
+  stroke: #fff;
+  fill: #fff;
+  font-weight: 700;
+  font-size: 150px;
+  stroke-width: 0px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: textAnimate3 5s ease-in-out;
+          animation: textAnimate3 5s ease-in-out;
+}
+
+@-webkit-keyframes textAnimate3 {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 30%;
+    stroke-width: 0;
+  }
+  35% {
+    fill: transparent;
+    stroke: #fff;
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -30%;
+    stroke-width: 1;
+  }
+  75% {
+    fill: #fff;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: -10%;
+    stroke-width: 3;
+  }
+  100% {
+    fill: #fff;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 0%;
+    stroke-width: 5;
+  }
+}
+
+@keyframes textAnimate3 {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 30%;
+    stroke-width: 0;
+  }
+  35% {
+    fill: transparent;
+    stroke: #fff;
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -30%;
+    stroke-width: 1;
+  }
+  75% {
+    fill: #fff;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: -10%;
+    stroke-width: 3;
+  }
+  100% {
+    fill: #fff;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 0%;
+    stroke-width: 5;
+  }
+}
+
 .Resume .waveAnimation {
   position: absolute;
   -webkit-transform: rotate(180deg);
@@ -39,7 +119,7 @@
   z-index: 0;
   background-size: contain;
   background-repeat: no-repeat !important;
-  overflow: visible;
+  overflow: hidden;
   height: 100%;
   -webkit-animation: moveLeftRight 15s ease-in-out infinite alternate;
           animation: moveLeftRight 15s ease-in-out infinite alternate;
@@ -53,8 +133,8 @@
 
 @-webkit-keyframes moveLeftRight {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-12%);
+            transform: translateX(-12%);
   }
   100% {
     -webkit-transform: translateX(0%);
@@ -64,8 +144,8 @@
 
 @keyframes moveLeftRight {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-12%);
+            transform: translateX(-12%);
   }
   100% {
     -webkit-transform: translateX(0%);
@@ -87,7 +167,7 @@
 }
 
 .Resume svg:not(:root) {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .Resume #map {
@@ -156,37 +236,41 @@
   position: relative;
 }
 
-.About .waveAnimation {
-  position: absolute;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  top: 0;
-  left: 0;
-  width: 200%;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat !important;
-  overflow: visible;
-  height: 100%;
-  -webkit-animation: moveLeftRight 15s ease-in-out infinite alternate;
-          animation: moveLeftRight 15s ease-in-out infinite alternate;
+.About .bio-content {
+  position: relative;
+  z-index: 1;
 }
 
-.About .waveAnimation .wave path {
-  fill: black;
-  stroke: #525252;
+.About .wave path {
+  fill: #000;
+  opacity: 1;
+  stroke: #333;
   fill-opacity: 1;
 }
 
 @keyframes moveLeftRight {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-12%);
+            transform: translateX(-12%);
   }
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+}
+
+.About .waveAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+  -webkit-animation: moveLeftRight 15s ease-in-out infinite alternate;
+          animation: moveLeftRight 15s ease-in-out infinite alternate;
 }
 
 .About .waveAnimation2 {
