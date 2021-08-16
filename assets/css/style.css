@@ -80,7 +80,7 @@ footer {
 }
 
 nav {
-    background: var(--black-glass);
+    background: #000;
     position: fixed;
     display: flex;
     align-items: center;
@@ -89,9 +89,12 @@ nav {
     width: 100%;
     border-bottom: 1px solid var(--soft-white);
     z-index: 2;
-    background: rgb(0 0 0 / 82%);
     backdrop-filter: blur(2px);
-  
+    transition: 150ms ease-in-out;
+}
+
+nav.scrolled {
+    background: var(--black-glass);
 }
 
 nav li {

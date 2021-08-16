@@ -13,7 +13,6 @@ copyrightYear.html(moment().format(`YYYY`));
 
 // Slashes Styling
 var slashes = $(`.slashes`);
-console.log(slashes);
 slashes.parent().addClass(`slashContainer`);
 
 // Intersection Observer
@@ -42,6 +41,8 @@ function inView(entries) {
             $(entry.target).toggleClass(`inView`);
             $(entry.target).removeClass(`notInView`);
             $(entry.target).removeClass(`animationEnded`);
+            $(entry.target).find(`text`).hide(10);
+            $(entry.target).find(`text`).show(10);
         } else {
             $(entry.target).toggleClass(`notInView`);
             $(entry.target).removeClass(`inView`);

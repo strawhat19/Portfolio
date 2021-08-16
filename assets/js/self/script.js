@@ -71,11 +71,13 @@ window.addEventListener('scroll', function () {
 
 // When the user scrolls down 0px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
+  let nav = document.querySelector(`nav`);
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    nav.classList.add(`scrolled`);
     topButton.style.display = "block";
   } else {
+    nav.classList.remove(`scrolled`);
     topButton.style.display = "none";
   }
   
