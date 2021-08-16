@@ -811,7 +811,7 @@ nav .Projects.active a:hover {
     background-repeat: no-repeat !important;
     background-size: 100% !important;
     color: #fff;
-    background: url(/assets/images/graphics/Sanctuary-Art.png);
+    background: url(./assets/images/graphics/Sanctuary-Art.png);
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
