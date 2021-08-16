@@ -19,7 +19,7 @@ body {
 }
 
 .navigation .slashes {
-  color: #fff;
+  color: var(--soft-white);
 }
 
 li.active a {
@@ -27,12 +27,12 @@ li.active a {
   font-weight: 600;
 }
 
-li.active .slashes {
-  color: black;
+a[href="./"]:hover .slashes {
+  color: #000 !important;
 }
 
-li.active:hover .slashes {
-  color: #fff;
+.slashContainer a:hover .slashes {
+  color: #fff !important;
 }
 
 .observe {
@@ -115,7 +115,7 @@ li.active:hover .slashes {
 
 .pictureWaves {
   display: none;
-  background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/LadyYellow.jpg);
+  background: url(/assets/images/CodeMan.jpg);
   overflow: hidden;
   background-size: 55%;
   border-radius: 100%;
@@ -379,6 +379,10 @@ li.active:hover .slashes {
   transition: 1s ease-in-out;
 }
 
+.newSec {
+  background: #000;
+}
+
 .twoCol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +392,9 @@ li.active:hover .slashes {
           justify-content: space-between;
   z-index: 1;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .twoCol .sideContent {

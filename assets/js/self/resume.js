@@ -15,6 +15,23 @@ copyrightYear.html(moment().format(`YYYY`));
 var slashes = $(`.slashes`);
 slashes.parent().addClass(`slashContainer`);
 
+// When User Clicks the Change Text Button
+var modal = $(`.modal`);
+var openModalButton = $(`.openModal`);
+var closeModalButton = $(`.closeModal`);
+openModalButton.on(`click`,function(event,button) {
+    modal.show(1000);
+    button = $(event.target);
+    button.removeClass(`openModal`);
+    button.addClass(`closeModal`);
+})
+closeModalButton.on(`click`,function(event,button) {
+    modal.hide(1000);
+    button = $(event.target);
+    button.removeClass(`closeModal`);
+    button.addClass(`openModal`);
+})
+
 // Intersection Observer
 // An API That Lets Us Detect When Elements Are In ViewPort
 let options2 = {

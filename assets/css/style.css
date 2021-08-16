@@ -107,7 +107,7 @@ nav li {
     font-size: 15px;
     font-weight: 600;
     color: #181a1b;
-        transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 nav ul {

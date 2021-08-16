@@ -7,6 +7,8 @@
     <link rel="icon" href="https://piratechs.com/wp-content/uploads/2019/05/Icon.svg" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+    <!-- jQuery Modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/sass/resume.css">
     <title>Rakib | Official Portfolio</title>
@@ -58,20 +60,20 @@
     <!-- End Navigation -->
 
     <!-- This is the Header -->
-    <header class="website-header Site-Header" id="Site-Header"><h1 class="opening-header">DESIGN <span class="slashes">//</span> DEVELOP</h1></header>
+    <header class="website-header Site-Header" id="Site-Header"><h1 class="opening-header"><span class="headerText">DESIGN <span class="slashes">//</span> DEVELOP</span></h1></header>
     <!-- This is the Main Content -->
     <main class="page-content">
 
         <section class="About section" id="About">
             <article class="bio-content">
-                <div class="header observe">
+                <div class="header observe slide">
                     <H2>STORY OF <span class="slashes">//</span> ME</H2>
                     <hr style="float: left;">
                 </div>
                 <br>
-                <div class="content observe">
+                <div class="content observe slide">
                      <p>Hey I'm Rakib Ahmed, but you can call me Ricky! I launched my first professional website in 2016. I Designed & Developed it for a prominent client in the entertainment industry. I was 19 years old… A lot has changed since then… Now, with amplified aesthetics from getting extremely familiar with all graphic design, web and coding, I learned how to design & develop cleaner sites in all platforms.</p>
-                    <img src="./assets/images/self/Ricky-Roadtripportfolio.png" alt="image of ricky">
+                    <img  class="observe slide" src="./assets/images/self/Ricky-Roadtripportfolio.png" alt="image of ricky">
                 </div>
             </article>
             <div class="waveAnimation">
@@ -93,22 +95,25 @@
 
         <section class="Resume section observe" id="Resume">
             <svg class="vectorGraphic vectorGraphicText" viewBox="0 0 1920 300">
-                <text class="scaleText observe" x="50%" y="50%" text-anchor="middle">Code // Resume</text>
+                <text class="scaleText" x="50%" y="50%" text-anchor="middle">Code // Resume</text>
             </svg>
             <div class="twoCol observe">
-                <div class="sideContent observe">
+                <div class="sideContent observe slide">
                     Some of the skills I learned over the past few months!
                 </div>
-                <div class="pictureWaves">
+                <div class="pictureWaves observe slide">
                     <svg class="blackWaves" width="379" height="379" viewBox="0 0 379 379" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 189.11C0 84.6674 84.6674 0 189.11 0C293.553 0 378.22 84.6674 378.22 189.11C378.22 293.553 293.553 378.22 189.11 378.22C84.6674 378.22 0 293.553 0 189.11ZM189.14 70.19C186.331 70.19 183.034 68.8249 179.227 66.4195C175.912 64.3249 172.508 61.6415 168.996 58.8738C168.515 58.4946 168.032 58.1138 167.547 57.7327C163.598 54.6316 159.498 51.4992 155.529 49.4266C151.594 47.3718 147.29 46.0918 143.128 47.442L143.127 47.4424C138.873 48.8252 136.058 52.3922 134.019 56.4104C131.968 60.4515 130.471 65.4154 129.103 70.2565C128.888 71.0184 128.676 71.7774 128.465 72.5313L128.459 72.5527C127.306 76.6788 126.194 80.6554 124.842 84.1409C123.222 88.3158 121.427 91.3039 119.255 92.8916C117.083 94.4791 113.684 95.2841 109.207 95.558C105.408 95.7903 101.196 95.629 96.8329 95.4618C96.114 95.4342 95.3909 95.4065 94.665 95.3804C89.6335 95.1993 84.4506 95.0941 79.9886 95.7788C75.5624 96.458 71.3058 97.9916 68.7089 101.559C66.1115 105.126 65.964 109.637 66.6845 114.047C67.4104 118.489 69.1121 123.373 70.8384 128.093C71.0806 128.755 71.3234 129.414 71.5649 130.07C73.079 134.181 74.5426 138.156 75.4994 141.866C76.6206 146.215 76.9084 149.729 76.062 152.339C75.2601 154.814 73.0087 157.393 69.5434 160.202C66.7148 162.494 63.365 164.721 59.8763 167.04L59.8741 167.041C59.1418 167.528 58.4033 168.019 57.6623 168.516C53.4763 171.32 49.2111 174.3 45.9946 177.538C42.7929 180.762 40.28 184.588 40.28 189.11C40.28 193.632 42.7926 197.459 45.9941 200.684C49.2106 203.924 53.4756 206.906 57.6619 209.712C58.4083 210.212 59.152 210.707 59.8895 211.197C63.3735 213.514 66.7185 215.739 69.5437 218.027C73.009 220.835 75.2597 223.41 76.0616 225.88C76.9055 228.486 76.6144 231.993 75.4889 236.334C74.533 240.021 73.0751 243.968 71.5658 248.055C71.3168 248.729 71.0664 249.407 70.8166 250.088C69.0874 254.804 67.3845 259.686 66.6616 264.136C65.9436 268.556 66.1019 273.074 68.7076 276.66C71.3132 280.246 75.575 281.799 80.0138 282.491C84.4858 283.188 89.675 283.088 94.7099 282.907C95.4865 282.879 96.2596 282.849 97.0278 282.82C101.34 282.653 105.497 282.492 109.25 282.713C113.724 282.976 117.108 283.767 119.26 285.332C121.409 286.895 123.194 289.866 124.812 294.04C126.158 297.511 127.267 301.474 128.419 305.589C128.636 306.365 128.855 307.146 129.077 307.93C130.45 312.777 131.953 317.748 134.009 321.794C136.053 325.816 138.873 329.388 143.129 330.768L143.132 330.769C147.292 332.113 151.594 330.83 155.528 328.775C159.496 326.701 163.595 323.57 167.543 320.47C168.023 320.093 168.502 319.715 168.979 319.34C172.495 316.57 175.903 313.884 179.222 311.788C183.029 309.385 186.327 308.02 189.14 308.02C191.952 308.02 195.251 309.386 199.059 311.792C202.375 313.887 205.78 316.572 209.293 319.34L209.305 319.349C209.782 319.726 210.261 320.103 210.742 320.481C214.691 323.583 218.791 326.716 222.761 328.788C226.697 330.842 231.002 332.121 235.163 330.767C239.417 329.387 242.232 325.822 244.271 321.806C246.322 317.766 247.819 312.803 249.187 307.962C249.299 307.565 249.411 307.168 249.522 306.773C249.625 306.402 249.729 306.033 249.832 305.665C250.985 301.539 252.096 297.564 253.448 294.079C255.068 289.904 256.863 286.916 259.035 285.328C261.206 283.742 264.603 282.939 269.081 282.669C272.871 282.441 277.072 282.604 281.424 282.774C281.802 282.789 282.181 282.804 282.561 282.818C282.914 282.832 283.269 282.845 283.624 282.858C288.655 283.043 293.839 283.15 298.303 282.462C302.732 281.78 306.989 280.238 309.584 276.657C312.178 273.079 312.326 268.565 311.606 264.151C310.88 259.705 309.178 254.822 307.452 250.105C307.279 249.634 307.107 249.164 306.934 248.696L306.72 248.115C305.208 244.011 303.746 240.045 302.791 236.342C301.669 231.998 301.382 228.489 302.228 225.882C303.03 223.409 305.281 220.83 308.747 218.021C311.575 215.729 314.924 213.502 318.411 211.182C319.145 210.694 319.886 210.202 320.628 209.704C324.814 206.899 329.079 203.917 332.296 200.679C335.497 197.456 338.01 193.63 338.01 189.11C338.01 184.592 335.496 180.768 332.295 177.546C329.079 174.309 324.814 171.329 320.628 168.523C319.889 168.028 319.153 167.538 318.423 167.053C314.931 164.73 311.578 162.5 308.747 160.205C305.282 157.395 303.031 154.816 302.229 152.34C301.384 149.731 301.676 146.223 302.801 141.882C303.757 138.193 305.216 134.245 306.725 130.158L306.732 130.139C306.979 129.473 307.226 128.802 307.473 128.128C309.203 123.413 310.906 118.532 311.628 114.083C312.346 109.663 312.188 105.146 309.583 101.56C306.977 97.9745 302.715 96.4209 298.276 95.7291C293.804 95.0321 288.615 95.1317 283.58 95.3129C282.804 95.3408 282.031 95.3707 281.262 95.4004C276.951 95.567 272.793 95.7276 269.041 95.507C264.566 95.2439 261.182 94.4531 259.031 92.8883C256.881 91.3251 255.096 88.3539 253.478 84.1797C252.132 80.7081 251.023 76.7447 249.87 72.6286C249.653 71.8534 249.435 71.0727 249.213 70.2889C247.84 65.4416 246.337 60.4698 244.281 56.4221C242.237 52.3987 239.417 48.8253 235.163 47.4424L235.158 47.441C230.998 46.0975 226.695 47.3798 222.759 49.4351C218.789 51.5084 214.689 54.6398 210.739 57.7396C210.256 58.1186 209.775 58.4972 209.297 58.8743C205.781 61.6428 202.373 64.327 199.055 66.4218C195.248 68.8256 191.95 70.19 189.14 70.19Z" fill="#021841"/>
                     </svg>
                 </div>
             </div>
-            <div id="couchAnimation" class="observe"></div>
             <div id="demo" class="">
                 <div class="buttonAnimationContainer">
-                    <button onclick="" id="demoButton" title="Prompt Username">ADDITIONAL INFORMATION</button>
+                    <button class="openModal" id="demoButton" title="Prompt Username">ADDITIONAL INFORMATION</button>
+                    <div id="ex1" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <a class="closeModal" rel="modal:close">Close</a>
+                      </div>
                 </div>
             </div>
             <div class="waveAnimation">
@@ -128,8 +133,22 @@
             </div>
         </section>
 
+        <section class="Resume newSec observe">
+            <div class="twoCol observe">
+                <div id="couchAnimation" class="observe slide"></div>
+                <div class="sideContent observe slide">
+                    Some of the skills I learned over the past few months!
+                </div>
+            </div>
+            <div id="demo" class="">
+                <div class="buttonAnimationContainer">
+                    <button onclick="" id="demoButton" title="Prompt Username">ADDITIONAL INFORMATION</button>
+                </div>
+            </div>
+        </section>
+
         <section class="Projects section" id="Projects">
-            <div class="header observe">
+            <div class="header observe slide">
                 <H2>PROJECTS // APPS</H2>
                 <hr style="float: right;">
             </div>
@@ -176,7 +195,7 @@
         </section>
 
         <section class="Contact section" id="Contact">
-            <div class="header observe">
+            <div class="header observe slide">
                 <H2>GET IN // CONTACT</H2>
                 <hr style="float: left;">
             </div>
@@ -313,6 +332,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- jQuery UI -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <!-- Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- Scroll Magic -->

@@ -23,21 +23,23 @@ body {
 
 .navigation {
     .slashes {
-        color: #fff;
+        color: var(--soft-white);
     }
 }
 
 li.active {
   a {
+        color: #fff !important;
+        font-weight: 600;
+    }
+}
+
+a[href="./"]:hover .slashes {
+    color: #000 !important;
+}
+
+.slashContainer a:hover .slashes {
     color: #fff !important;
-    font-weight: 600;
-  } .slashes {
-    color: black;
-  } &:hover {
-      .slashes {
-        color: #fff;
-      }
-  }
 }
 
 .observe {
@@ -114,7 +116,7 @@ li.active {
         transform-origin: center;
     }
     display: none;
-    background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/LadyYellow.jpg);
+    background: url(/assets/images/CodeMan.jpg);
     overflow: hidden;
     background-size: 55%;
     border-radius: 100%;
@@ -269,11 +271,16 @@ li.active {
     }
 }
 
+.newSec {
+    background: #000;
+}
+
 .twoCol {
     display: flex;
     justify-content: space-between;
     z-index: 1;
     width: 100%;
+    align-items: center;
     .sideContent {
         font-size: 1.5em;
     }
