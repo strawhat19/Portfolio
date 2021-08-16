@@ -12,13 +12,18 @@ body {
 :root {
     --main-blue: #00c2ff;
     --main-red: #ff172d;
-    --main-green: #00cc80;
-    --dark-blue: #00164c;
     --main-teal: #0dbdb4;
+    --dark-blue: #00164c;
     --dark: #181a1b;
     --grays: rgb(48, 52, 54);
     --soft-white: rgb(232, 230, 227);
     --black-glass: rgb(0 0 0 / 50%);
+}
+
+header {
+    .slashes {
+        color: var(--soft-white);
+    }
 }
 
 .observe {
@@ -79,6 +84,188 @@ body {
     animation: textAnimate3 5s ease-in-out;
 }
 
+.slashes {
+    color: var(--main-teal);
+}
+
+.opening-header .slashes {
+    color: #000;
+}
+
+.pictureWaves {
+    .blackWaves path {
+        stroke: var(--dark);
+        fill: var(--dark);
+        animation: rotate 5s linear infinite, strokeAnimation 3s ease-in-out infinite alternate;
+        transform-origin: center;
+    }
+    display: none;
+    background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/LadyYellow.jpg);
+    overflow: hidden;
+    background-size: 55%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    overflow: visible;
+    z-index: 0;
+        &::after {
+        content: '';
+        background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/f2983bdd19804aa8d3b0e9db9f417a09257b100e/assets/images/graphics/TextWrapped.svg);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        animation: rotate 55s linear infinite reverse;
+    }
+}
+
+.Resume {
+    background: linear-gradient(180deg, var(--dark-blue),black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--soft-white);
+    position: relative;
+    ::selection {
+        background: var(--main-teal)
+    } .vectorGraphicText {
+        z-index: 1;
+        text {
+            stroke: #fff;
+            fill: #fff;
+            font-weight: 700;
+            font-size: 150px;
+            stroke-width: 0px;
+            transform-origin: left;
+            animation: textAnimate3 5s ease-in-out;
+        }
+    } @keyframes textAnimate3 {
+        0% {
+          fill: transparent;
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset: 30%;
+          stroke-width: 0;
+        }
+        35% {
+          fill: transparent;
+          stroke: #fff;
+          stroke-dasharray: 50% 0; 
+          stroke-dashoffset: -30%;
+          stroke-width: 1;
+        }
+        75% {
+          fill: #fff;
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset: -10%;
+          stroke-width: 3;
+        }
+        100% {
+          fill: #fff;
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset: 0%;
+          stroke-width: 5;
+        }
+    } @mixin waveController {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        z-index: 0;
+        background-size: contain;
+        background-repeat: no-repeat !important;
+        overflow: hidden;
+        height: 100%;
+        .wave path {
+            fill: var(--main-teal);
+            opacity: 0.8;
+            stroke: none;
+        } @keyframes moveLeftRight {
+            0% {
+                transform: translateX(-12%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }    
+    } .waveAnimation {
+        @include waveController();
+        animation: moveLeftRight 15s ease-in-out infinite alternate;
+    } .waveAnimation2 {
+        animation: moveLeftRight 30s ease-in-out infinite alternate-reverse;
+    } .waveAnimation3 {
+        animation: moveLeftRight 20s ease-in-out infinite alternate;
+    } hr {
+        border-color: var(--main-teal);
+    } svg:not(:root) {
+        overflow: visible;
+    } #map {
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+        margin: 5em 0 0;
+    } #couchAnimation {
+        width: 50%;
+        height: auto;
+    } // Button Styles
+    #demoButton {
+        color: var(--soft-white);
+        position: relative;
+        font-family: 'Montserrat';
+        letter-spacing: 1.8px;
+        font-weight: 600;
+        background: #f00;
+        border: none;
+        outline: none;
+        padding: 15px;
+        -webkit-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            background: #000;
+            color: var(--soft-white);
+            border: none;
+            transition: 1s ease-in-out;
+        } &:active {
+            background: #000;
+            border: 2px inset var(--main-red);
+        } &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background: var(--main-red);
+            transform: scale(0,1);
+            transform-origin: 0% 100%;
+            transition: 1s ease-in-out;
+        } &:hover::after {
+            transform: scale(1, 1);
+            transition: 1s ease-in-out;
+        }
+    }
+}
+
+.twoCol {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    .sideContent {
+        font-size: 1.5em;
+    }
+}
+
+// Animations
 @keyframes slideRight {
     0% {
         transform: translateX(300px);
@@ -139,181 +326,18 @@ body {
 }
 
 
-.pictureWaves {
-    .blackWaves path {
-        stroke: var(--dark);
-        fill: var(--dark);
-        animation: rotate 5s linear infinite, strokeAnimation 3s ease-in-out infinite alternate;
-        transform-origin: center;
-    }
-    display: none;
-    background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/LadyYellow.jpg);
-    overflow: hidden;
-    background-size: 55%;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-    overflow: visible;
-    z-index: 0;
-        &::after {
-        content: '';
-        background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/f2983bdd19804aa8d3b0e9db9f417a09257b100e/assets/images/graphics/TextWrapped.svg);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: contain;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        animation: rotate 55s linear infinite reverse;
-    }
-}
-
-.Resume {
-    background: var(--dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--soft-white);
-    position: relative;
-    ::selection {
-        background: var(--main-green)
-    } .vectorGraphicText {
-        z-index: 1;
-        text {
-            stroke: #fff;
-            fill: #fff;
-            font-weight: 700;
-            font-size: 150px;
-            stroke-width: 0px;
-            transform-origin: left;
-            animation: textAnimate3 5s ease-in-out;
-        }
-    } @keyframes textAnimate3 {
-        0% {
-          fill: transparent;
-          stroke-dasharray: 0 50%;
-          stroke-dashoffset: 30%;
-          stroke-width: 0;
-        }
-        35% {
-          fill: transparent;
-          stroke: #fff;
-          stroke-dasharray: 50% 0; 
-          stroke-dashoffset: -30%;
-          stroke-width: 1;
-        }
-        75% {
-          fill: #fff;
-          stroke-dasharray: 0 50%;
-          stroke-dashoffset: -10%;
-          stroke-width: 3;
-        }
-        100% {
-          fill: #fff;
-          stroke-dasharray: 0 50%;
-          stroke-dashoffset: 0%;
-          stroke-width: 5;
-        }
-    } @mixin waveController {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200%;
-        z-index: 0;
-        background-size: contain;
-        background-repeat: no-repeat !important;
-        overflow: hidden;
-        height: 100%;
-        .wave path {
-            fill: var(--main-green);
-            opacity: 0.8;
-            stroke: none;
-        } @keyframes moveLeftRight {
-            0% {
-                transform: translateX(-12%);
-            }
-            100% {
-                transform: translateX(0%);
-            }
-        }    
-    } .waveAnimation {
-        @include waveController();
-        animation: moveLeftRight 15s ease-in-out infinite alternate;
-    } .waveAnimation2 {
-        animation: moveLeftRight 30s ease-in-out infinite alternate-reverse;
-    } .waveAnimation3 {
-        animation: moveLeftRight 20s ease-in-out infinite alternate;
-    } hr {
-        border-color: var(--main-green);
-    } svg:not(:root) {
-        overflow: hidden;
-    } #map {
-        width: 100%;
-        height: 250px;
-        border-radius: 20px;
-        margin: 5em 0 0;
-    } #couchAnimation {
-        width: 50%;
-        height: auto;
-    } // Button Styles
-    #demoButton {
-        color: var(--soft-white);
-        position: relative;
-        font-family: 'Montserrat';
-        letter-spacing: 1.8px;
-        font-weight: 600;
-        background: #f00;
-        border: none;
-        outline: none;
-        padding: 15px;
-        -webkit-transition: 1s ease-in-out;
-        transition: 1s ease-in-out;
-        &:hover {
-            cursor: pointer;
-            background: #000;
-            color: var(--soft-white);
-            border: none;
-            transition: 1s ease-in-out;
-        } &:active {
-            background: #000;
-            border: 2px inset var(--main-red);
-        } &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            left: 0;
-            bottom: 0;
-            background: var(--main-red);
-            transform: scale(0,1);
-            transform-origin: 0% 100%;
-            transition: 1s ease-in-out;
-        } &:hover::after {
-            transform: scale(1, 1);
-            transition: 1s ease-in-out;
-        }
-    }
-}
-
 // About Section Modded
 #About {
     background: var(--dark);
     position: relative;
-    border-bottom: 2px solid var(--soft-white);
+    border-bottom: none;
     .bio-content {
         position: relative;
         z-index: 1;
     } @mixin waveController {
         position: absolute;
         top: 0;
-        left: 0;
+        left: -2px;
         width: 200%;
         height: 100%;
         z-index: 0;
@@ -323,7 +347,8 @@ body {
     } .wave path {
         fill: #000;
         opacity: 1;
-        stroke: #333;
+        stroke: var(--main-teal);
+        stroke-width: 2;
         fill-opacity: 1;
     } @keyframes moveLeftRight {
             0% {

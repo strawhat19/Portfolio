@@ -11,6 +11,11 @@ body.fadeIn(1000);
 var copyrightYear = $(`.copyright-year`);
 copyrightYear.html(moment().format(`YYYY`));
 
+// Slashes Styling
+var slashes = $(`.slashes`);
+console.log(slashes);
+slashes.parent().addClass(`slashContainer`);
+
 // Intersection Observer
 // An API That Lets Us Detect When Elements Are In ViewPort
 let options2 = {
