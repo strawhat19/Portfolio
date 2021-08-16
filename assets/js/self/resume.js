@@ -15,7 +15,7 @@ copyrightYear.html(moment().format(`YYYY`));
 // An API That Lets Us Detect When Elements Are In ViewPort
 let options2 = {
     root: null,
-    rootMargin: `-250px 0px`,
+    rootMargin: `-150px 0px`,
     threshhold: 0.05
 };
 
@@ -39,19 +39,20 @@ function inView(entries) {
             $(entry.target).removeClass(`animationEnded`);
         } else {
             $(entry.target).toggleClass(`notInView`);
+            $(entry.target).removeClass(`inView`);
         }
     })
 }
 
 // Initializing First Map Screen
-function initmap(){
-    var options = {
-        zoom: 1,
-        center: {lat:30,lng:0}
-    } // Map Options
-    var map = new google.maps.Map(document.getElementById('map'),options);
-} // Invoking Create Map Function using Google Maps API
-initmap();
+// function initmap(){
+//     var options = {
+//         zoom: 1,
+//         center: {lat:30,lng:0}
+//     } // Map Options
+//     var map = new google.maps.Map(document.getElementById('map'),options);
+// } // Invoking Create Map Function using Google Maps API
+// initmap();
 
 // var testLink = $(``)
 
