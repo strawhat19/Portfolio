@@ -16,6 +16,10 @@ body {
     --dark-blue: #00164c;
     --dark: #181a1b;
     --grays: rgb(48, 52, 54);
+    --html: #f16529;
+    --css: #2862e9;
+    --js: #f7df1e;
+    --php: #7377ad;
     --soft-white: rgb(232, 230, 227);
     --black-glass: rgb(0 0 0 / 80%);
     --transition: cubic-bezier(0.77,0.2,0.05,1.0);
@@ -353,6 +357,35 @@ a[href="./"]:hover .slashes {
     align-items: center;
     .sideContent {
         font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        p { max-width: 27em; }
+        .iconRowContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1em 0 3em;
+            flex-wrap: wrap;
+            grid-gap: 1em;
+        } .iconRow {
+            width: auto;
+            display: flex;
+            grid-gap: .3em;
+            align-items: center;
+            .slashes {
+                font-size: 1em;
+            }
+        } // Media Queries
+    } @media (max-width: 1475px) {
+        flex-direction: column;
+        grid-gap: 5em;
+        .sideContent {
+            text-align: justify;
+        } .iconRow {
+            text-align: center;
+        }
     }
 }
 

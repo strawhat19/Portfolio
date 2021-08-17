@@ -1717,18 +1717,18 @@ div, textarea, input {
     }
 
     .opening-header {
-        font-size: 16px;
+        font-size: 22px;
         text-align: center;
     }
     
     h2 {
-        font-size: 12px;
+        font-size: 17px;
     }
 
     #About .content p {
         margin-top: -65px;
         width: 100%;
-        font-size: 12px;
+        font-size: 14px;
         text-align: justify;
     }
 

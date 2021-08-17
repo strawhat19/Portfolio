@@ -488,6 +488,68 @@ a[href="./"]:hover .slashes {
 
 .twoCol .sideContent {
   font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.twoCol .sideContent p {
+  max-width: 27em;
+}
+
+.twoCol .sideContent .iconRowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1em 0 3em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-gap: 1em;
+}
+
+.twoCol .sideContent .iconRow {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: .3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.twoCol .sideContent .iconRow .slashes {
+  font-size: 1em;
+}
+
+@media (max-width: 1475px) {
+  .twoCol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 5em;
+  }
+  .twoCol .sideContent {
+    text-align: justify;
+  }
+  .twoCol .iconRow {
+    text-align: center;
+  }
 }
 
 @-webkit-keyframes slideRight {
