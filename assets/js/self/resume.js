@@ -17,27 +17,35 @@ slashes.parent().addClass(`slashContainer`);
 
 // When User Clicks the Change Text Button
 var modal = $(`.modal`);
-var openModalButton = $(`.openModal`);
-var closeModalButton = $(`.closeModal`);
-openModalButton.on(`click`,function(event,button) {
-    modal.show(1000);
-    button = $(event.target);
-    button.removeClass(`openModal`);
-    button.addClass(`closeModal`);
+var changeTextArea = modal.find(`input`);
+changeTextArea.keypress(event => {
+    if (event.keyCode === 13) {
+        var textValue = changeTextArea.val();
+        if (!textValue) {
+            changeTextArea.attr(`placeholder`,`Please Enter Valid Word`);
+            return;
+        } else if (textValue.split(` `).length > 2) {
+            changeTextArea.val(``);
+            // console.log(`Words Too Long!`);
+            // changeTextArea.attr(`value`,`Please Enter Oonly One or Two Words`);
+            changeTextArea.attr(`placeholder`,`Please Enter Only One or Two Words`);
+            return;
+        } else {
+            modal.fadeOut(1000);
+            $(`.jquery-modal`).fadeOut(1000);
+            $(`.scaleText`).hide(10).show(10).html(textValue);
+        }
+    }
 })
-closeModalButton.on(`click`,function(event,button) {
-    modal.hide(1000);
-    button = $(event.target);
-    button.removeClass(`closeModal`);
-    button.addClass(`openModal`);
-})
+
+
 
 // Intersection Observer
 // An API That Lets Us Detect When Elements Are In ViewPort
 let options2 = {
     root: null,
-    rootMargin: `-150px 0px`,
-    threshhold: 0.05
+    // rootMargin: `-150px 0px`,
+    // threshhold: 0.05
 };
 
 // Declaring New Observer To Use for Observing All Elements with Class of .observe
@@ -67,6 +75,20 @@ function inView(entries) {
     })
 }
 
+// Animations
+// Wave Animation
+var waveAnimation = $(`.waveAnimation`);
+waveAnimation.not(`.waveBottom`).css(`top`,`0`);
+
+// Couch Animation
+var animation = bodymovin.loadAnimation({
+    container: document.querySelector('#couchAnimation'),
+    renderer: `svg`,
+    loop: true,
+    autoplay: true,
+    path: `./assets/json/couchAnimation.json`
+})
+
 // Initializing First Map Screen
 // function initmap(){
 //     var options = {
@@ -78,13 +100,4 @@ function inView(entries) {
 // initmap();
 
 // var testLink = $(``)
-
-// Animations
-var animation = bodymovin.loadAnimation({
-    container: document.querySelector('#couchAnimation'),
-    renderer: `svg`,
-    loop: true,
-    autoplay: true,
-    path: `./assets/json/couchAnimation.json`
-  })
 

@@ -40,6 +40,67 @@ a[href="./"]:hover .slashes {
   transition: 1000ms var(--transition);
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  -webkit-transition: 1000ms var(--transition);
+  transition: 1000ms var(--transition);
+}
+
+.overlay::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.05em;
+}
+
+.modal {
+  background: var(--main-teal);
+}
+
+.modal .newDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1em;
+}
+
+.modal input {
+  width: 100%;
+  border-radius: 8px;
+  background: var(--dark-blue);
+  color: var(--soft-white);
+  padding: 1em 0 1em 1em;
+  font-family: 'Montserrat';
+}
+
+.modal input:focus-visible {
+  outline: none;
+  border-radius: 8px;
+}
+
+.modal a[href="#"] {
+  color: var(--soft-white);
+  text-decoration: none;
+  text-align: center;
+}
+
 .inView {
   -webkit-animation: fadeIn 1s var(--transition);
           animation: fadeIn 1s var(--transition);
@@ -111,6 +172,21 @@ a[href="./"]:hover .slashes {
 
 .opening-header .slashes {
   color: #000;
+}
+
+.waveBottom {
+  height: 12em !important;
+  bottom: 0;
+}
+
+.waveBottom svg path {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  fill: var(--main-teal) !important;
+  opacity: 0.8 !important;
+  stroke: none !important;
 }
 
 .pictureWaves {
@@ -259,7 +335,6 @@ a[href="./"]:hover .slashes {
 
 .Resume .waveAnimation {
   position: absolute;
-  top: 0;
   left: 0;
   width: 200%;
   z-index: 0;
@@ -328,18 +403,32 @@ a[href="./"]:hover .slashes {
   height: auto;
 }
 
+.Resume .modal {
+  background: var(--main-teal);
+  opacity: 0;
+  -webkit-transition: 1000ms var(--transition);
+  transition: 1000ms var(--transition);
+}
+
 .Resume #demoButton {
   color: var(--soft-white);
   position: relative;
   font-family: 'Montserrat';
   letter-spacing: 1.8px;
   font-weight: 600;
-  background: #f00;
+  background: var(--main-teal);
   border: none;
   outline: none;
-  padding: 15px;
+  padding: 0px;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
+}
+
+.Resume #demoButton .modalLink {
+  color: var(--soft-white);
+  text-decoration: none;
+  padding: 15px;
+  line-height: 3em;
 }
 
 .Resume #demoButton:hover {
@@ -353,7 +442,7 @@ a[href="./"]:hover .slashes {
 
 .Resume #demoButton:active {
   background: #000;
-  border: 2px inset var(--main-red);
+  border: 2px inset var(--main-teal);
 }
 
 .Resume #demoButton::after {
@@ -363,7 +452,7 @@ a[href="./"]:hover .slashes {
   height: 2px;
   left: 0;
   bottom: 0;
-  background: var(--main-red);
+  background: var(--main-teal);
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
   -webkit-transform-origin: 0% 100%;
@@ -445,6 +534,11 @@ a[href="./"]:hover .slashes {
   }
 }
 
+.jquery-modal {
+  -webkit-animation: fadeIn 1000ms var(--transition);
+          animation: fadeIn 1000ms var(--transition);
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -464,8 +558,8 @@ a[href="./"]:hover .slashes {
 }
 
 .fadeOut {
-  -webkit-animation: fadeOut 3s ease-in-out;
-          animation: fadeOut 3s ease-in-out;
+  -webkit-animation: fadeOut 1000ms var(--transition);
+          animation: fadeOut 1000ms var(--transition);
 }
 
 @-webkit-keyframes fadeOut {
@@ -580,7 +674,6 @@ a[href="./"]:hover .slashes {
 
 #About .waveAnimation {
   position: absolute;
-  top: 0;
   left: -2px;
   width: 200%;
   height: 100%;

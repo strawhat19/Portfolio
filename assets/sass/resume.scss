@@ -46,6 +46,56 @@ a[href="./"]:hover .slashes {
     transition: 1000ms var(--transition);
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.75);
+    text-align: center;
+    transition: 1000ms var(--transition);
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.05em;
+    }
+}
+
+.modal {
+    background: var(--main-teal);
+    .newDiv {
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+    }
+    input {
+        width: 100%;
+        border-radius: 8px;
+        background: var(--dark-blue);
+        color: var(--soft-white);
+        padding: 1em 0 1em 1em;
+        font-family: 'Montserrat';
+        &:focus-visible {
+            outline: none;
+            border-radius: 8px;
+        }
+    }
+    a[href="#"] {
+        color: var(--soft-white);
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
 .inView {
     animation: fadeIn 1s var(--transition);
     transform: translateX(0px);
@@ -106,6 +156,18 @@ a[href="./"]:hover .slashes {
 
 .opening-header .slashes {
     color: #000;
+}
+
+.waveBottom {
+    height: 12em !important;
+    bottom: 0;
+    svg path {
+        transform-origin: center;
+        transform: rotate(180deg);
+        fill: var(--main-teal) !important;
+        opacity: 0.8 !important;
+        stroke: none !important;
+    }
 }
 
 .pictureWaves {
@@ -192,7 +254,6 @@ a[href="./"]:hover .slashes {
         }
     } @mixin waveController {
         position: absolute;
-        top: 0;
         left: 0;
         width: 200%;
         z-index: 0;
@@ -231,17 +292,26 @@ a[href="./"]:hover .slashes {
     } #couchAnimation {
         width: 50%;
         height: auto;
+    } .modal {
+        background: var(--main-teal);
+        opacity: 0;
+        transition: 1000ms var(--transition);
     } // Button Styles
     #demoButton {
-        color: var(--soft-white);
+        .modalLink {
+            color: var(--soft-white);
+            text-decoration: none;
+            padding: 15px;
+            line-height: 3em;
+        } color: var(--soft-white);
         position: relative;
         font-family: 'Montserrat';
         letter-spacing: 1.8px;
         font-weight: 600;
-        background: #f00;
+        background: var(--main-teal);
         border: none;
         outline: none;
-        padding: 15px;
+        padding: 0px;
         -webkit-transition: 1s ease-in-out;
         transition: 1s ease-in-out;
         &:hover {
@@ -252,7 +322,7 @@ a[href="./"]:hover .slashes {
             transition: 1s ease-in-out;
         } &:active {
             background: #000;
-            border: 2px inset var(--main-red);
+            border: 2px inset var(--main-teal);
         } &::after {
             content: '';
             position: absolute;
@@ -260,7 +330,7 @@ a[href="./"]:hover .slashes {
             height: 2px;
             left: 0;
             bottom: 0;
-            background: var(--main-red);
+            background: var(--main-teal);
             transform: scale(0,1);
             transform-origin: 0% 100%;
             transition: 1s ease-in-out;
@@ -304,6 +374,9 @@ a[href="./"]:hover .slashes {
         transform: translateX(0px);
     }
 }
+.jquery-modal {
+    animation: fadeIn 1000ms var(--transition);
+}
 
 @keyframes fadeIn {
     0% {
@@ -315,7 +388,7 @@ a[href="./"]:hover .slashes {
 }
 
 .fadeOut {
-    animation: fadeOut 3s ease-in-out;
+    animation: fadeOut 1000ms var(--transition);
 }
 
 @keyframes fadeOut {
@@ -368,7 +441,6 @@ a[href="./"]:hover .slashes {
         z-index: 1;
     } @mixin waveController {
         position: absolute;
-        top: 0;
         left: -2px;
         width: 200%;
         height: 100%;
