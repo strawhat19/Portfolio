@@ -186,7 +186,7 @@ nav ul {
 }
 
 /* Social Links */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1235px) {
 
     #socialLinksMain {
         display: flex;
@@ -194,7 +194,7 @@ nav ul {
 
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1235px) {
 
     #socialLinksMain {
         display: none !important;
@@ -537,7 +537,7 @@ a#interestsLink:hover #interestsLink span#menuTogglerSpan {
     font-size: 75px;
     padding: 85px 55px 30px;
     margin: 0;
-    background: linear-gradient(rgb(13 189 180),rgb(0 120 75 / 0%)), url(/assets/images/Ocean-Stars.jpg);
+    background: linear-gradient(rgb(13 189 180),rgb(0 120 75 / 0%)), url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/Ocean-Stars.jpg);
     background-position: 50% 0%;
     background-attachment: fixed;
     top: 0;

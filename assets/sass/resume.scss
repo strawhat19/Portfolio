@@ -20,6 +20,7 @@ body {
     --css: #2862e9;
     --js: #f7df1e;
     --php: #7377ad;
+    --sass: #f783ac;
     --soft-white: rgb(232, 230, 227);
     --black-glass: rgb(0 0 0 / 80%);
     --transition: cubic-bezier(0.77,0.2,0.05,1.0);
@@ -35,11 +36,40 @@ li.active {
   a {
         color: #fff !important;
         font-weight: 600;
+        transition: 150ms var(--transition);
     }
+}
+
+.resumeMode,.resumeMode,.resumeMode.blueMode  {
+    background: var(--main-teal);
+    color: var(--soft-white);
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.resumeMode:hover::before,.resumeMode.blueMode:hover::before  {
+    background: var(--dark-blue) !important;
+    color: var(--soft-white);
+    transition: 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 a[href="./"]:hover .slashes {
     color: #000 !important;
+}
+
+a[href="#Resume"] {
+    padding: 0 15px;
+    transition: 150ms var(--transition);
+}
+
+a[href="#Resume"].active {
+    padding: 15px;
+    transition: 150ms var(--transition);
+    background: var(--dark-blue);
+}
+
+a[href="#Resume"].active:hover {
+    transition: 150ms var(--transition);
+    background: black;
 }
 
 .slashContainer a:hover .slashes {
@@ -182,7 +212,7 @@ a[href="./"]:hover .slashes {
         transform-origin: center;
     }
     display: none;
-    background: url(/assets/images/CodeMan.jpg);
+    background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/CodeMan.jpg);
     overflow: hidden;
     background-size: 55%;
     border-radius: 100%;
@@ -196,7 +226,7 @@ a[href="./"]:hover .slashes {
     z-index: 0;
         &::after {
         content: '';
-        background: url(/assets/images/graphics/TextWrapped2.svg);
+        background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/e2ee5208e8617e4bd1689ef413616b1c4d9d3b99/assets/images/graphics/TextWrapped2.svg);
         width: 100%;
         height: 100%;
         position: absolute;
@@ -218,7 +248,8 @@ a[href="./"]:hover .slashes {
     color: var(--soft-white);
     position: relative;
     ::selection {
-        background: var(--main-teal)
+        background: var(--main-teal);
+        color: var(--dark-blue);
     } .vectorGraphicText {
         z-index: 1;
         text {
@@ -303,10 +334,14 @@ a[href="./"]:hover .slashes {
     } // Button Styles
     #demoButton {
         .modalLink {
-            color: var(--soft-white);
+            color: var(--dark-blue);
             text-decoration: none;
             padding: 15px;
             line-height: 3em;
+            transition: 1000ms var(--transition);
+            &:hover {
+                color: var(--soft-white);
+            }
         } color: var(--soft-white);
         position: relative;
         font-family: 'Montserrat';
@@ -375,7 +410,7 @@ a[href="./"]:hover .slashes {
             grid-gap: .3em;
             align-items: center;
             .slashes {
-                font-size: 1em;
+                font-size: .8em;
             }
         } // Media Queries
     } @media (max-width: 1475px) {
@@ -486,7 +521,7 @@ a[href="./"]:hover .slashes {
         opacity: 1;
         stroke: var(--main-teal);
         stroke-width: 2;
-        fill-opacity: 1;
+        fill-opacity: .9;
         // animation: strokeDance 15s var(--transition);
     } @keyframes moveLeftRight {
             0% {

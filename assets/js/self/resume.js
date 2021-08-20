@@ -16,32 +16,27 @@ var slashes = $(`.slashes`);
 slashes.parent().addClass(`slashContainer`);
 
 // When User Clicks the Change Text Button
-var modal = $(`.modal`);
-var changeTextArea = modal.find(`input`);
-changeTextArea.keypress(event => {
-    if (event.keyCode === 13) {
-        var textValue = changeTextArea.val();
-        if (!textValue) {
-            changeTextArea.attr(`placeholder`,`Please Enter Valid Word`);
-            return;
-        } else if (textValue.split(` `).length > 2) {
-            changeTextArea.val(``);
-            // console.log(`Words Too Long!`);
-            // changeTextArea.attr(`value`,`Please Enter Oonly One or Two Words`);
-            changeTextArea.attr(`placeholder`,`Please Enter Only One or Two Words`);
-            return;
-        } else {
-            modal.fadeOut(1000);
-            $(`.jquery-modal`).fadeOut(1000);
-            $(`.scaleText`).hide(10).show(10).html(textValue);
-        }
-    }
-})
-
-
+// var modal = $(`.modal`);
+// var changeTextArea = modal.find(`input`);
+// changeTextArea.keypress(event => {
+//     if (event.keyCode === 13) {
+//         var textValue = changeTextArea.val();
+//         if (!textValue) {
+//             changeTextArea.attr(`placeholder`,`Please Enter Valid Word`);
+//             return;
+//         } else if (textValue.split(` `).length > 2) {
+//             changeTextArea.val(``);
+//             changeTextArea.attr(`placeholder`,`Please Enter Only One or Two Words`);
+//             return;
+//         } else {
+//             modal.fadeOut(1000);
+//             $(`.jquery-modal`).fadeOut(1000);
+//             $(`.scaleText`).hide(10).show(10).html(textValue);
+//         }
+//     }
+// })
 
 // Intersection Observer
-// An API That Lets Us Detect When Elements Are In ViewPort
 let options2 = {
     root: null,
     // rootMargin: `-150px 0px`,
@@ -68,9 +63,17 @@ function inView(entries) {
             $(entry.target).removeClass(`animationEnded`);
             $(entry.target).find(`text`).hide(10);
             $(entry.target).find(`text`).show(10);
+            if ($(entry.target).parent().hasClass(`Resume`)) {
+                $(`a[href="#Resume"]`).addClass(`active`);
+                $(`#topButton`).attr(`class`,`resumeMode`);
+            }
         } else {
             $(entry.target).toggleClass(`notInView`);
             $(entry.target).removeClass(`inView`);
+            if ($(entry.target).parent().hasClass(`newSec`)) {
+                $(`a[href="#Resume"]`).removeClass(`active`);
+                $(`#topButton`).removeClass(`resumeMode`);
+            }
         }
     })
 }
@@ -88,16 +91,3 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: `./assets/json/couchAnimation.json`
 })
-
-// Initializing First Map Screen
-// function initmap(){
-//     var options = {
-//         zoom: 1,
-//         center: {lat:30,lng:0}
-//     } // Map Options
-//     var map = new google.maps.Map(document.getElementById('map'),options);
-// } // Invoking Create Map Function using Google Maps API
-// initmap();
-
-// var testLink = $(``)
-

@@ -13,6 +13,11 @@ body {
   --dark-blue: #00164c;
   --dark: #181a1b;
   --grays: rgb(48, 52, 54);
+  --html: #f16529;
+  --css: #2862e9;
+  --js: #f7df1e;
+  --php: #7377ad;
+  --sass: #f783ac;
   --soft-white: rgb(232, 230, 227);
   --black-glass: rgb(0 0 0 / 80%);
   --transition: cubic-bezier(0.77,0.2,0.05,1.0);
@@ -25,10 +30,45 @@ body {
 li.active a {
   color: #fff !important;
   font-weight: 600;
+  -webkit-transition: 150ms var(--transition);
+  transition: 150ms var(--transition);
+}
+
+.resumeMode, .resumeMode, .resumeMode.blueMode {
+  background: var(--main-teal);
+  color: var(--soft-white);
+  -webkit-transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.resumeMode:hover::before, .resumeMode.blueMode:hover::before {
+  background: var(--dark-blue) !important;
+  color: var(--soft-white);
+  -webkit-transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 a[href="./"]:hover .slashes {
   color: #000 !important;
+}
+
+a[href="#Resume"] {
+  padding: 0 15px;
+  -webkit-transition: 150ms var(--transition);
+  transition: 150ms var(--transition);
+}
+
+a[href="#Resume"].active {
+  padding: 15px;
+  -webkit-transition: 150ms var(--transition);
+  transition: 150ms var(--transition);
+  background: var(--dark-blue);
+}
+
+a[href="#Resume"].active:hover {
+  -webkit-transition: 150ms var(--transition);
+  transition: 150ms var(--transition);
+  background: black;
 }
 
 .slashContainer a:hover .slashes {
@@ -191,7 +231,7 @@ a[href="./"]:hover .slashes {
 
 .pictureWaves {
   display: none;
-  background: url(/assets/images/CodeMan.jpg);
+  background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/CodeMan.jpg);
   overflow: hidden;
   background-size: 55%;
   border-radius: 100%;
@@ -222,7 +262,7 @@ a[href="./"]:hover .slashes {
 
 .pictureWaves::after {
   content: '';
-  background: url(/assets/images/graphics/TextWrapped2.svg);
+  background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/e2ee5208e8617e4bd1689ef413616b1c4d9d3b99/assets/images/graphics/TextWrapped2.svg);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -255,10 +295,12 @@ a[href="./"]:hover .slashes {
 
 .Resume ::-moz-selection {
   background: var(--main-teal);
+  color: var(--dark-blue);
 }
 
 .Resume ::selection {
   background: var(--main-teal);
+  color: var(--dark-blue);
 }
 
 .Resume .vectorGraphicText {
@@ -425,10 +467,16 @@ a[href="./"]:hover .slashes {
 }
 
 .Resume #demoButton .modalLink {
-  color: var(--soft-white);
+  color: var(--dark-blue);
   text-decoration: none;
   padding: 15px;
   line-height: 3em;
+  -webkit-transition: 1000ms var(--transition);
+  transition: 1000ms var(--transition);
+}
+
+.Resume #demoButton .modalLink:hover {
+  color: var(--soft-white);
 }
 
 .Resume #demoButton:hover {
@@ -533,7 +581,7 @@ a[href="./"]:hover .slashes {
 }
 
 .twoCol .sideContent .iconRow .slashes {
-  font-size: 1em;
+  font-size: .8em;
 }
 
 @media (max-width: 1475px) {
@@ -720,7 +768,7 @@ a[href="./"]:hover .slashes {
   opacity: 1;
   stroke: var(--main-teal);
   stroke-width: 2;
-  fill-opacity: 1;
+  fill-opacity: .9;
 }
 
 @keyframes moveLeftRight {

@@ -42,7 +42,7 @@
                 <!-- Desktop // Mobile Menu Toggle -->
                 <ul class="desktop-menu-option mobile-Menu" id="desktopMenu">
                     <li class="nav-link About"><a href="#About">About <span class="slashes">//</span> <i class="fas fa-user-edit"></i></a></li>
-                    <li class="nav-link resumeLink"><a href="#resumeLink">Resume <span class="slashes">//</span> <i class="fas fa-user-edit"></i></a></li>
+                    <li class="nav-link resumeLink"><a href="#Resume">Resume <span class="slashes">//</span> <i class="fas fa-user-edit"></i></a></li>
                     <li class="nav-link Projects"><a href="#Projects">Projects <span class="slashes">//</span> <i class="fas        fa-project-diagram"></i></a></li>
                     <li class="nav-link Contact"><a href="#Contact">Contact <span class="slashes">//</span> <i class="fas fa-paper-plane"></i></a></li>
                         <div class="social-links" id="socialLinks">
@@ -108,18 +108,10 @@
             </div>
         </section>
 
-        <section class="Resume section observe" id="Resume">
+        <section class="Resume section" id="Resume">
             <svg class="vectorGraphic vectorGraphicText" viewBox="0 0 1920 300">
                 <text class="scaleText" x="50%" y="50%" text-anchor="middle">Code // Resume</text>
             </svg>
-            <div id="demo" class="">
-                <div class="buttonAnimationContainer">
-                    <button class="openModal" id="demoButton" title="Prompt Username"> 
-                        <!-- Link to open the modal -->
-                        <a class="modalLink" href="#fade" rel="modal:open">CHANGE TEXT</a>
-                    </button>
-                </div>
-            </div>
             <div class="twoCol observe">
                 <div class="sideContent observe slide">
                     <div class="header observe slide inView">
@@ -129,9 +121,9 @@
                     <p>Over the past few months I have been taking a deep dive into web development at a more advanced level than ever before. Some of the skills I have refined during this process are:</p>
                     <div class="iconRowContainer">
                         <div class="iconRow"><i style="color: var(--html)" class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div>
-                        <div class="iconRow"><i class="fab fa-css3-alt"></i> <span class="slashes">//</span> CSS</div>
-                        <div class="iconRow"><i class="fab fa-sass"></i> <span class="slashes">//</span> SASS</div>
-                        <div class="iconRow"><i class="fab fa-js-square"></i> <span class="slashes">//</span> JS</div>
+                        <div class="iconRow"><i style="color: var(--css)" class="fab fa-css3-alt"></i> <span class="slashes">//</span> CSS</div>
+                        <div class="iconRow"><i style="color: var(--sass)" class="fab fa-sass"></i> <span class="slashes">//</span> SASS</div>
+                        <div class="iconRow"><i style="color: var(--js)" class="fab fa-js-square"></i> <span class="slashes">//</span> JS</div>
                     </div>
                 </div>
                 <div class="pictureWaves observe slide">
@@ -145,6 +137,14 @@
                 <input placeholder="Enter Text Here"></input>
                 <div class="newDiv">
                     <a href="#" rel="modal:close">Close</a>
+                </div>
+            </div>
+               <div id="demo" class="observe">
+                <div class="buttonAnimationContainer">
+                    <button class="openModal" id="demoButton" title="Open Resume">
+                        <!-- Link to open the modal -->
+                        <a class="modalLink" target="_blank" href="./resume/Rakib-Ahmed-Coding-Resume.pdf">RESUME</a>
+                    </button>
                 </div>
             </div>
             <div class="waveAnimation">
@@ -164,16 +164,11 @@
             </div>
         </section>
 
-        <section class="Resume newSec observe">
+        <section class="Resume newSec">
             <div class="twoCol observe">
                 <div id="couchAnimation" class="observe slide"></div>
                 <div class="sideContent observe slide">
                     Some of the skills I learned over the past few months!
-                </div>
-            </div>
-            <div id="demo" class="">
-                <div class="buttonAnimationContainer">
-                    <button onclick="" id="demoButton" title="Prompt Username">ADDITIONAL INFORMATION</button>
                 </div>
             </div>
         </section>
