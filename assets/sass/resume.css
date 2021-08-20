@@ -291,6 +291,7 @@ a[href="#Resume"].active:hover {
           flex-direction: column;
   color: var(--soft-white);
   position: relative;
+  padding-top: 175px !important;
 }
 
 .Resume ::-moz-selection {
@@ -452,6 +453,10 @@ a[href="#Resume"].active:hover {
   transition: 1000ms var(--transition);
 }
 
+.Resume #demo {
+  padding: 70px 0px 50px;
+}
+
 .Resume #demoButton {
   color: var(--soft-white);
   position: relative;
@@ -525,13 +530,14 @@ a[href="#Resume"].active:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   z-index: 1;
-  width: 100%;
+  grid-gap: 1em;
+  width: 85%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .twoCol .sideContent {
@@ -553,6 +559,17 @@ a[href="#Resume"].active:hover {
 
 .twoCol .sideContent p {
   max-width: 27em;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 30px;
+  -webkit-transition: 150ms var(--transition);
+  transition: 150ms var(--transition);
+}
+
+@media (max-width: 480px) {
+  .twoCol .sideContent p {
+    font-size: 16px;
+  }
 }
 
 .twoCol .sideContent .iconRowContainer {
@@ -590,7 +607,7 @@ a[href="#Resume"].active:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    grid-gap: 5em;
+    grid-gap: 1em;
   }
   .twoCol .sideContent {
     text-align: justify;

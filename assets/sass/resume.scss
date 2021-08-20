@@ -247,6 +247,7 @@ a[href="#Resume"].active:hover {
     flex-direction: column;
     color: var(--soft-white);
     position: relative;
+    padding-top: 175px !important;
     ::selection {
         background: var(--main-teal);
         color: var(--dark-blue);
@@ -332,7 +333,9 @@ a[href="#Resume"].active:hover {
         opacity: 0;
         transition: 1000ms var(--transition);
     } // Button Styles
-    #demoButton {
+    #demo {
+        padding: 70px 0px 50px;
+    } #demoButton {
         .modalLink {
             color: var(--dark-blue);
             text-decoration: none;
@@ -385,10 +388,17 @@ a[href="#Resume"].active:hover {
 }
 
 .twoCol {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     z-index: 1;
-    width: 100%;
+    grid-gap: 1em;
+    width: 85%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     .sideContent {
         font-size: 1.5em;
@@ -396,8 +406,16 @@ a[href="#Resume"].active:hover {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        p { max-width: 27em; }
-        .iconRowContainer {
+        p { 
+            max-width: 27em;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 30px;
+            transition: 150ms var(--transition);
+            @media (max-width: 480px) {
+                font-size: 16px;
+            }
+        } .iconRowContainer {
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -415,7 +433,7 @@ a[href="#Resume"].active:hover {
         } // Media Queries
     } @media (max-width: 1475px) {
         flex-direction: column;
-        grid-gap: 5em;
+        grid-gap: 1em;
         .sideContent {
             text-align: justify;
         } .iconRow {

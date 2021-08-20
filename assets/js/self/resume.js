@@ -15,6 +15,15 @@ copyrightYear.html(moment().format(`YYYY`));
 var slashes = $(`.slashes`);
 slashes.parent().addClass(`slashContainer`);
 
+// Image Hover Liquid Effect
+// new hoverEffect({
+//     parent: $(`.distortion`),
+//     intensity: 0.2,
+//     image1: `./assets/images/design/IphoneTransparentVersion.png`,
+//     image2: `./assets/images/design/Portfolio-screenshotlarge.jpg`,
+//     displacementImage: `./assets/images/displacement/heightMap.png`
+// })
+
 // When User Clicks the Change Text Button
 // var modal = $(`.modal`);
 // var changeTextArea = modal.find(`input`);

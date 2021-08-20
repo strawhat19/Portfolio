@@ -829,6 +829,7 @@ transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     flex-direction: column;
     justify-content: center;
     transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
+    width: 100%;
 }
 
 #Projects .box h4 {
@@ -896,7 +897,7 @@ a.project-link.project-image:hover {
 
 /* Laptops */
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1499px) {
 
     .header {
         float: left;
@@ -959,6 +960,11 @@ a.project-link.project-image:hover {
         max-width: 700px;
         margin: 0 auto;
         transition: 0.15s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #About {
+        padding-top: 200px !important;
+        padding-bottom: 200px !important;
     }
 
     .header {
@@ -1209,7 +1215,7 @@ a.project-link.project-image:hover {
 }
 
 #demo {
-    padding: 20px 0px 70px;
+    padding: 10px 0px 0px;
     z-index: 1;
 }
 
@@ -1413,6 +1419,11 @@ a.project-link.project-image:hover {
 
     section {
         padding: 40px 60px 40px 40px !important;
+    }
+
+    #About {
+        padding-top: 90px !important;
+        padding-bottom: 150px !important;
     }
 
     hr {
