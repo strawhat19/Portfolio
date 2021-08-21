@@ -1558,9 +1558,9 @@ div, textarea, input {
 
   .contact-form {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     column-gap: 15px;
-    align-items: flex-start;
+    align-items: center;
     padding: 50px 0 0;
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }

@@ -690,10 +690,21 @@ a[href="#Resume"].active:hover {
     padding: 0em 0 1em;
 }
 
+.newSec::selection {
+    background: var(--main-red) !important;
+    color: #000 !important;
+}
+
 #quizAppImage {
     width: 100%;
 }
 
 .contact-form .container {
     display: none;
+}
+
+@media screen and (min-width: 1499px) {
+    #Contact .header {
+        float: none;
+    }
 }
