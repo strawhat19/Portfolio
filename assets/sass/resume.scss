@@ -276,8 +276,8 @@ a[href="#Resume"].active:hover {
     } .vectorGraphicText {
         z-index: 1;
         text {
-            stroke: #fff;
-            fill: #fff;
+            stroke: var(--soft-white);
+            fill: var(--soft-white);
             font-weight: 700;
             font-size: 150px;
             stroke-width: 0px;
@@ -293,19 +293,19 @@ a[href="#Resume"].active:hover {
         }
         35% {
           fill: transparent;
-          stroke: #fff;
+          stroke: var(--soft-white);
           stroke-dasharray: 50% 0; 
           stroke-dashoffset: -30%;
           stroke-width: 1;
         }
         75% {
-          fill: #fff;
+          fill: var(--soft-white);
           stroke-dasharray: 0 50%;
           stroke-dashoffset: -10%;
           stroke-width: 3;
         }
         100% {
-          fill: #fff;
+          fill: var(--soft-white);
           stroke-dasharray: 0 50%;
           stroke-dashoffset: 0%;
           stroke-width: 5;
@@ -349,7 +349,7 @@ a[href="#Resume"].active:hover {
         border-radius: 20px;
         margin: 5em 0 0;
     } #couchAnimation {
-        width: 60%;
+        width: 100%;
         height: auto;
     } .modal {
         background: var(--main-teal);
@@ -431,18 +431,27 @@ a[href="#Resume"].active:hover {
     justify-content: space-between;
     z-index: 1;
     grid-gap: 1em;
-    width: 85%;
+    width: 100%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     .sideContent {
         font-size: 1.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        width: 100%;
         p { 
-            max-width: 27em;
             font-size: 19px;
             font-weight: 500;
             line-height: 30px;
@@ -591,4 +600,100 @@ a[href="#Resume"].active:hover {
     } .waveAnimation3 {
         animation: moveLeftRight 20s ease-in-out infinite alternate;
     }
+}
+
+
+#projectsBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+}
+
+.appImageElement {
+    max-width: 100%;
+}
+
+
+.goodMorningContainer {
+    flex-direction: column;
+    hr {
+        width: 100%;
+    }
+    .header {
+        text-align: center;
+        width: 100% !important;
+    }
+    .twoCol .sideContent p {
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+    img.goodMorningImage {
+        max-width: 50% !important;
+    }
+}
+
+@media (min-width: 1474px) {
+
+    .weatherAppContainer .sideContent {
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .iconRowContainer {
+        max-width: 25em;
+    }
+
+    .twoCol .sideContent p {
+        max-width: 27em;
+    }
+
+    #weatherAppImage {
+        width: 100%;
+    }
+    
+    .weatherAppContent {
+        width: 100%;
+    }
+
+    .iconRowContainer {
+        max-width: 27em;
+    }
+  
+}
+
+@media (max-width: 1474px) {
+    // .topRepoLink {
+    //     display: none !important;
+    // }
+    .appContainer .sideContent {
+        order: 2;
+    }
+}
+
+.weatherAppContainer,.codeQuizContainer {
+    padding-top: 5em;
+    padding-bottom: 0em;
+}
+
+.topRepoLink {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 0 1em;
+}
+
+#quizAppImage {
+    width: 100%;
+}
+
+.contact-form .container {
+    display: none;
 }

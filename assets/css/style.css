@@ -1206,6 +1206,7 @@ a.project-link.project-image:hover {
     background-image: repeating-linear-gradient( 
 45deg
  , rgb(44, 47, 49) 1px, rgb(24, 26, 27) 2px, rgb(34, 37, 38) 213px);
+    /* display: none; */
 }
 
 #Contact ::selection, #Contact hr {

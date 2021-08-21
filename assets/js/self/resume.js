@@ -110,3 +110,11 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: `./assets/json/couchAnimation.json`
 })
+
+var animationBG = bodymovin.loadAnimation({
+    container: document.querySelector('#projectsBackground'),
+    renderer: `svg`,
+    loop: true,
+    autoplay: true,
+    path: `./assets/json/lf30_editor_duxeb5k1.json`
+})
