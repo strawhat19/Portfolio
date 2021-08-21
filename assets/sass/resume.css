@@ -207,8 +207,8 @@ a[href="#Resume"].active:hover {
 }
 
 .inView text {
-  -webkit-animation: textAnimate3 5s ease-in-out;
-          animation: textAnimate3 5s ease-in-out;
+  -webkit-animation: textAnimate3 2s ease-in-out;
+          animation: textAnimate3 2s ease-in-out;
 }
 
 .slashes {
@@ -236,7 +236,7 @@ a[href="#Resume"].active:hover {
 
 .pictureWaves {
   display: none;
-  background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/CodeMan.jpg);
+  background: url(https://media4.giphy.com/media/Ib44RsTu9ZMtWeL1fC/giphy.gif?cid=ecf05e47o6bkk6lwu4zn9touzu49cw9yfdb4z6byrmshyr83&rid=giphy.gif&ct=g);
   overflow: hidden;
   background-size: 55%;
   border-radius: 100%;
@@ -244,11 +244,11 @@ a[href="#Resume"].active:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: relative;
@@ -322,8 +322,8 @@ a[href="#Resume"].active:hover {
   stroke-width: 0px;
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-animation: textAnimate3 5s ease-in-out;
-          animation: textAnimate3 5s ease-in-out;
+  -webkit-animation: textAnimate3 2s ease-in-out;
+          animation: textAnimate3 2s ease-in-out;
 }
 
 @-webkit-keyframes textAnimate3 {
@@ -383,6 +383,7 @@ a[href="#Resume"].active:hover {
 }
 
 .Resume .waveAnimation {
+  margin-top: -0.1em;
   position: absolute;
   left: 0;
   width: 200%;

@@ -88,7 +88,7 @@ nav {
     top: 0;
     width: 100%;
     border-bottom: 1px solid var(--soft-white);
-    z-index: 2;
+    z-index: 3;
     backdrop-filter: blur(2px);
     transition: 150ms ease-in-out;
 }
@@ -1461,7 +1461,7 @@ a.project-link.project-image:hover {
         background-repeat: no-repeat !important;
         background-size: 100% !important;
         color: var(--soft-white);
-        background: url(/assets/images/graphics/Sanctuary-Art.png);
+        background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/graphics/Sanctuary-Art.png);
     }
 
    footer {

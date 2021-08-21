@@ -187,7 +187,7 @@ a[href="#Resume"].active:hover {
 }
 
 .inView text {
-    animation: textAnimate3 5s ease-in-out;
+    animation: textAnimate3 2s ease-in-out;
 }
 
 .slashes {
@@ -218,12 +218,18 @@ a[href="#Resume"].active:hover {
         transform-origin: center;
     }
     display: none;
-    background: url(https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/CodeMan.jpg);
+    background: url(https://media4.giphy.com/media/Ib44RsTu9ZMtWeL1fC/giphy.gif?cid=ecf05e47o6bkk6lwu4zn9touzu49cw9yfdb4z6byrmshyr83&rid=giphy.gif&ct=g);
     overflow: hidden;
     background-size: 55%;
     border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -276,7 +282,7 @@ a[href="#Resume"].active:hover {
             font-size: 150px;
             stroke-width: 0px;
             transform-origin: left;
-            animation: textAnimate3 5s ease-in-out;
+            animation: textAnimate3 2s ease-in-out;
         }
     } @keyframes textAnimate3 {
         0% {
@@ -326,6 +332,7 @@ a[href="#Resume"].active:hover {
             }
         }    
     } .waveAnimation {
+        margin-top: -0.1em;
         @include waveController();
         animation: moveLeftRight 15s ease-in-out infinite alternate;
     } .waveAnimation2 {

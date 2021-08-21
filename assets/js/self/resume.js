@@ -15,6 +15,16 @@ copyrightYear.html(moment().format(`YYYY`));
 var slashes = $(`.slashes`);
 slashes.parent().addClass(`slashContainer`);
 
+// var codeResume = $(`.codeResume`);
+// var codeResumeArray = codeResume.html().split(``);
+// var slashOne = codeResumeArray[5];
+// var slashTwo = codeResumeArray[6];
+// slashOne.css(`color`,`var(--main-teal)`);
+// slashTwo.css(`color`,`var(--main-teal)`);
+// var newProjects = $(`.newProjects`);
+// var newProjectsArray = newProjects.html().split(``);
+// newProjectsArray[4] + ` ` + newProjectsArray[5];
+
 // Image Hover Liquid Effect
 // new hoverEffect({
 //     parent: $(`.distortion`),
